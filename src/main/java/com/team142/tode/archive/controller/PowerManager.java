@@ -8,8 +8,8 @@ package com.team142.tode.archive.controller;
 import com.team142.tode.archive.controller.runnable.powers.Power;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.messages.outgoing.other.MessageCooldown;
-import com.team142.tode.archive.model.messages.outgoing.rendered.MessagePowerLevel;
+import com.team142.tode.model.messages.outgoing.other.MessageCooldown;
+import com.team142.tode.model.messages.outgoing.rendered.MessagePowerLevel;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

@@ -15,10 +15,20 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TDServer {
 
     private static TDServer instance = TDServer.builder()
-            .game(new ConcurrentHashMap<>())
+            .games(new ConcurrentHashMap<>())
             .build();
 
-    public ConcurrentHashMap<String, TDGame> game;
+    public ConcurrentHashMap<String, TDGame> games;
     public ConcurrentHashMap<String, TDPlayer> players;
+
+    public void playerConnects(TDPlayer player) {
+        this.players.put(player.getId(), player);
+    }
+
+    public void playerDisconnects(TDPlayer player) {
+        this.games.forEachValue(10, (v) -> v.playerLeaves(player));
+        this.players.remove(player.getId());
+    }
+
 
 }

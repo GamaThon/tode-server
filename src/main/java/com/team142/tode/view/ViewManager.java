@@ -6,8 +6,8 @@
 package com.team142.tode.view;
 
 import com.team142.tode.archive.controller.MessageManager;
-import com.team142.tode.archive.model.messages.base.ViewType;
-import com.team142.tode.archive.model.messages.outgoing.other.MessageChangeView;
+import com.team142.tode.model.messages.base.ViewType;
+import com.team142.tode.model.messages.outgoing.other.MessageChangeView;
 
 /**
  * @author just1689

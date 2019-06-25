@@ -10,10 +10,10 @@ import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
 import com.team142.tode.archive.model.Server;
 import com.team142.tode.model.mappable.organic.MapSettings;
-import com.team142.tode.archive.model.messages.base.ViewType;
-import com.team142.tode.archive.model.messages.incoming.MessageJoinServer;
-import com.team142.tode.archive.model.messages.outgoing.other.MessageListOfGames;
-import com.team142.tode.archive.model.messages.outgoing.other.MessageShareTag;
+import com.team142.tode.model.messages.base.ViewType;
+import com.team142.tode.model.messages.incoming.MessageJoinServer;
+import com.team142.tode.model.messages.outgoing.other.MessageListOfGames;
+import com.team142.tode.model.messages.outgoing.other.MessageShareTag;
 import com.team142.tode.view.ViewManager;
 import org.springframework.web.socket.WebSocketSession;
 

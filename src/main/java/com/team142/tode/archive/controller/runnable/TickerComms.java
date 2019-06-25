@@ -8,7 +8,7 @@ package com.team142.tode.archive.controller.runnable;
 import com.team142.tode.archive.controller.MessageManager;
 import com.team142.tode.archive.controller.runnable.base.AbstractTickerWorker;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.messages.outgoing.rendered.MessageShareThingsDynamic;
+import com.team142.tode.model.messages.outgoing.rendered.MessageShareThingsDynamic;
 
 /**
  * @author just1689

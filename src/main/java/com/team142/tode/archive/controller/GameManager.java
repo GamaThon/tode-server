@@ -10,9 +10,9 @@ import com.team142.tode.archive.model.KillEventTracker;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
 import com.team142.tode.model.mappable.artificial.Tower;
-import com.team142.tode.archive.model.messages.base.ViewType;
-import com.team142.tode.archive.model.messages.incoming.MessageJoinGame;
-import com.team142.tode.archive.model.messages.outgoing.rendered.*;
+import com.team142.tode.model.messages.base.ViewType;
+import com.team142.tode.model.messages.incoming.MessageJoinGame;
+import com.team142.tode.model.messages.outgoing.rendered.*;
 import com.team142.tode.view.ViewManager;
 
 import java.util.concurrent.ThreadLocalRandom;

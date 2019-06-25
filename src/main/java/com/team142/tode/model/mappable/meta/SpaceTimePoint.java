@@ -2,7 +2,7 @@ package com.team142.tode.model.mappable.meta;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.team142.tode.archive.model.jackson.DoubleContextualSerializer;
+import com.team142.tode.model.jackson.DoubleContextualSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

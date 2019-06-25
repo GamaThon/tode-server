@@ -10,7 +10,7 @@ import com.team142.tode.archive.controller.MessageManager;
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.messages.outgoing.other.MessageIntelChange;
+import com.team142.tode.model.messages.outgoing.other.MessageIntelChange;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

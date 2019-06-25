@@ -7,8 +7,8 @@ package com.team142.tode.archive.controller;
 
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.messages.incoming.MessageKeyDown;
-import com.team142.tode.archive.model.messages.incoming.MessageKeyUp;
+import com.team142.tode.model.messages.incoming.MessageKeyDown;
+import com.team142.tode.model.messages.incoming.MessageKeyUp;
 
 /**
  * @author just1689
