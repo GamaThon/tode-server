@@ -14,7 +14,6 @@ import com.team142.tode.model.mappable.artificial.Tank;
 import com.team142.tode.model.messages.base.ViewType;
 import com.team142.tode.model.messages.incoming.MessageJoinGame;
 import com.team142.tode.model.messages.outgoing.rendered.*;
-import com.team142.tode.utils.Reporter;
 import com.team142.tode.view.ViewManager;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -68,7 +67,6 @@ public class GameManager {
         announcePlayerJoins(game, player);
         sendMapToPlayer(player.getId(), game);
         game.getSoundManager().sendSpawn();
-        Reporter.reportJoins(player.getName());
 
         PowerManager.givePlayerRandomPower(player);
         PowerManager.givePlayerRandomPower(player);

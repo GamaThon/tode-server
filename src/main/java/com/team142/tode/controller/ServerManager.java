@@ -14,7 +14,6 @@ import com.team142.tode.model.messages.base.ViewType;
 import com.team142.tode.model.messages.incoming.MessageJoinServer;
 import com.team142.tode.model.messages.outgoing.other.MessageListOfGames;
 import com.team142.tode.model.messages.outgoing.other.MessageShareTag;
-import com.team142.tode.utils.Reporter;
 import com.team142.tode.view.ViewManager;
 import org.springframework.web.socket.WebSocketSession;
 
@@ -126,7 +125,6 @@ public class ServerManager {
         Repository.PLAYERS_ON_SERVER.remove(id);
         Repository.SESSIONS_ON_SERVER.remove(id);
 
-        Reporter.reportLeaves();
 
     }
 

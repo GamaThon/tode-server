@@ -24,11 +24,6 @@ public class MessageKeyDown extends MessageKey implements Runnable {
 
     @Override
     public void run() {
-        if (Server.IS_DEV && getKey().toUpperCase().equals("P")) {
-            Player player = Repository.PLAYERS_ON_SERVER.get(getFrom());
-            PowerManager.givePlayerRandomPower(player);
-            return;
-        }
         PlayerManager.handle(this);
     }
 
