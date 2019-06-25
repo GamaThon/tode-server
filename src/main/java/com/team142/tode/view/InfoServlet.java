@@ -5,7 +5,7 @@
  */
 package com.team142.tode.view;
 
-import com.team142.tode.model.Repository;
+import com.team142.tode.archive.model.Repository;
 import com.team142.tode.utils.JsonUtils;
 
 import javax.servlet.ServletException;

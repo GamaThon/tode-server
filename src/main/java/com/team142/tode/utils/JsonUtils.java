@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.team142.tode.model.Server;
+import com.team142.tode.archive.model.Server;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

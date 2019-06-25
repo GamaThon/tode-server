@@ -5,9 +5,9 @@
  */
 package com.team142.tode.view;
 
-import com.team142.tode.controller.MessageManager;
-import com.team142.tode.controller.ServerManager;
-import com.team142.tode.model.Server;
+import com.team142.tode.archive.controller.MessageManager;
+import com.team142.tode.archive.controller.ServerManager;
+import com.team142.tode.archive.model.Server;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.WebSocketMessage;

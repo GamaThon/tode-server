@@ -1,6 +1,6 @@
 package com.team142.tode.utils;
 
-import com.team142.tode.model.mappable.meta.Rectangle;
+import com.team142.tode.archive.model.mappable.meta.Rectangle;
 
 public class RectangleUtils {
 

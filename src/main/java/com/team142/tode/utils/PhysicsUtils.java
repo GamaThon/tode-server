@@ -5,8 +5,8 @@
  */
 package com.team142.tode.utils;
 
-import com.team142.tode.model.mappable.meta.PlaceableElement;
-import com.team142.tode.model.mappable.meta.SpaceTimePoint;
+import com.team142.tode.archive.model.mappable.meta.PlaceableElement;
+import com.team142.tode.archive.model.mappable.meta.SpaceTimePoint;
 
 /**
  * @author just1689
