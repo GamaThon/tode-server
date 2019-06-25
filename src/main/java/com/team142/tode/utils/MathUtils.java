@@ -1,11 +1,11 @@
 package com.team142.tode.utils;
 
-import com.team142.tode.archive.model.mappable.meta.PlaceableElement;
+import com.team142.tode.model.mappable.meta.PlaceableElement;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-import static com.team142.tode.archive.model.mappable.meta.MovableElement.MAX_ROTATE;
+import static com.team142.tode.model.mappable.meta.MovableElement.MAX_ROTATE;
 
 public class MathUtils {
 

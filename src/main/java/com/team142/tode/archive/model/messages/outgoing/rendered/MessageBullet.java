@@ -5,7 +5,6 @@
  */
 package com.team142.tode.archive.model.messages.outgoing.rendered;
 
-import com.team142.tode.archive.model.mappable.artificial.Bullet;
 import com.team142.tode.archive.model.messages.base.ConversationType;
 import com.team142.tode.archive.model.messages.base.Message;
 import lombok.Getter;

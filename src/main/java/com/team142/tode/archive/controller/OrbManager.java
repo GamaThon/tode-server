@@ -9,8 +9,8 @@ import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.GameMap;
 import com.team142.tode.archive.model.Orb;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.mappable.artificial.Tank;
-import com.team142.tode.archive.model.mappable.meta.SpaceTimePoint;
+import com.team142.tode.model.mappable.artificial.Tower;
+import com.team142.tode.model.mappable.meta.SpaceTimePoint;
 import com.team142.tode.archive.model.messages.outgoing.rendered.MessageDeleteOrb;
 import com.team142.tode.archive.model.messages.outgoing.rendered.MessageNewOrb;
 import com.team142.tode.utils.PhysicsUtils;
@@ -55,7 +55,7 @@ public class OrbManager {
 
     }
 
-    public static Orb isTankInOrb(Tank tank, String gameId) {
+    public static Orb isTankInOrb(Tower tank, String gameId) {
         return Repository.GAMES_ON_SERVER.get(gameId)
                 .getOrbs()
                 .values()

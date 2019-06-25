@@ -1,7 +1,7 @@
-package com.team142.tode.archive.model.mappable.artificial;
+package com.team142.tode.model.mappable.artificial;
 
 import com.team142.tode.archive.model.Player;
-import com.team142.tode.archive.model.mappable.meta.SpaceTimePoint;
+import com.team142.tode.model.mappable.meta.SpaceTimePoint;
 import com.team142.tode.utils.MathUtils;
 import com.team142.tode.utils.RectangleUtils;
 import org.junit.jupiter.api.AfterAll;

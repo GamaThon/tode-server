@@ -6,7 +6,7 @@
 package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.Game;
-import com.team142.tode.archive.model.mappable.organic.MapTileElement;
+import com.team142.tode.model.mappable.organic.MapTileElement;
 import com.team142.tode.archive.model.messages.base.ConversationType;
 import com.team142.tode.archive.model.messages.base.Message;
 import lombok.Getter;

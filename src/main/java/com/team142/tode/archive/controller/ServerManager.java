@@ -9,7 +9,7 @@ import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
 import com.team142.tode.archive.model.Server;
-import com.team142.tode.archive.model.mappable.organic.MapSettings;
+import com.team142.tode.model.mappable.organic.MapSettings;
 import com.team142.tode.archive.model.messages.base.ViewType;
 import com.team142.tode.archive.model.messages.incoming.MessageJoinServer;
 import com.team142.tode.archive.model.messages.outgoing.other.MessageListOfGames;

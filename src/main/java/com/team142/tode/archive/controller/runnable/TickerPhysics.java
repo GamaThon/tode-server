@@ -7,7 +7,6 @@ package com.team142.tode.archive.controller.runnable;
 import com.team142.tode.archive.controller.runnable.base.AbstractTickerWorker;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.mappable.artificial.Bullet;
 
 /**
  * @author just1689

@@ -9,8 +9,7 @@ import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.KillEventTracker;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.archive.model.mappable.artificial.Bullet;
-import com.team142.tode.archive.model.mappable.artificial.Tank;
+import com.team142.tode.model.mappable.artificial.Tower;
 import com.team142.tode.archive.model.messages.base.ViewType;
 import com.team142.tode.archive.model.messages.incoming.MessageJoinGame;
 import com.team142.tode.archive.model.messages.outgoing.rendered.*;
@@ -161,13 +160,13 @@ public class GameManager {
 
     }
 
-    public static void notifyHealthChange(String gameId, Tank tank) {
+    public static void notifyHealthChange(String gameId, Tower tank) {
         Game game = Repository.GAMES_ON_SERVER.get(gameId);
         MessageManager.sendPlayersAMessage(game, new MessageHealth(tank));
 
     }
 
-    public static void notifyHealthChange(Player player, Tank tank) {
+    public static void notifyHealthChange(Player player, Tower tank) {
         MessageManager.sendPlayerAMessage(player.getId(), new MessageHealth(tank));
 
     }

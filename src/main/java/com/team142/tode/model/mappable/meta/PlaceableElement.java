@@ -3,20 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.team142.tode.archive.model.mappable.artificial;
+package com.team142.tode.model.mappable.meta;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author just1689
  */
 @AllArgsConstructor
-@Data
-public class BulletHitResult {
+public class PlaceableElement {
 
-    private boolean hit;
-    private double damage;
-    private boolean lethal;
+    @Getter
+    private final int TAG;
+    @Getter
+    @Setter
+    private SpaceTimePoint point;
+    @Getter
+    @Setter
+    private String skin;
 
 }

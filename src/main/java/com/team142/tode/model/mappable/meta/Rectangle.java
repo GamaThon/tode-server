@@ -1,4 +1,4 @@
-package com.team142.tode.archive.model.mappable.meta;
+package com.team142.tode.model.mappable.meta;
 
 public interface Rectangle {
     double width = 0;

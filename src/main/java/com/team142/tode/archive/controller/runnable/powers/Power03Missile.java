@@ -10,7 +10,6 @@ import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
 import com.team142.tode.archive.model.Server;
-import com.team142.tode.archive.model.mappable.artificial.Bullet;
 
 /**
  * @author just1689

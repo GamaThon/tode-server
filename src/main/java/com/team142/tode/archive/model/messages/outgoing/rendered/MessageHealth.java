@@ -5,7 +5,7 @@
  */
 package com.team142.tode.archive.model.messages.outgoing.rendered;
 
-import com.team142.tode.archive.model.mappable.artificial.Tank;
+import com.team142.tode.model.mappable.artificial.Tower;
 import com.team142.tode.archive.model.messages.base.ConversationType;
 import com.team142.tode.archive.model.messages.base.Message;
 import lombok.Data;
@@ -22,7 +22,7 @@ public class MessageHealth extends Message {
     private double maxHealth, health;
 
 
-    public MessageHealth(Tank tank) {
+    public MessageHealth(Tower tank) {
         setConversation(ConversationType.S_SHARE_HEALTH.name());
         this.tag = tank.getTAG();
         this.maxHealth = tank.getMaxHealth();

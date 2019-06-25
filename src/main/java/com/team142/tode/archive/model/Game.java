@@ -9,7 +9,7 @@ import com.team142.tode.archive.controller.GameManager;
 import com.team142.tode.archive.controller.MessageManager;
 import com.team142.tode.archive.controller.SoundManager;
 import com.team142.tode.archive.controller.runnable.TickerPing;
-import com.team142.tode.archive.model.mappable.artificial.Tank;
+import com.team142.tode.model.mappable.artificial.Tower;
 import com.team142.tode.archive.model.messages.outgoing.other.MessageGameSummary;
 import com.team142.tode.archive.model.messages.outgoing.other.MessagePlayerLeft;
 import lombok.Data;
@@ -31,7 +31,7 @@ public class Game {
     private final String id;
     private final String name;
     private final List<Player> players = new CopyOnWriteArrayList<>();
-    private final ConcurrentHashMap<String, Tank> TANKS = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<String, Tower> TANKS = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<String, Orb> orbs = new ConcurrentHashMap<>();
     private GameMap map;
     private SoundManager soundManager;

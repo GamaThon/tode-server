@@ -11,9 +11,8 @@ import com.team142.tode.archive.controller.runnable.TickerComms;
 import com.team142.tode.archive.controller.runnable.TickerPhysics;
 import com.team142.tode.archive.controller.runnable.powers.Power;
 import com.team142.tode.archive.controller.runnable.powers.Power01Shoot;
-import com.team142.tode.archive.model.mappable.artificial.Bullet;
-import com.team142.tode.archive.model.mappable.artificial.Tank;
-import com.team142.tode.archive.model.mappable.meta.SpaceTimePoint;
+import com.team142.tode.model.mappable.artificial.Tower;
+import com.team142.tode.model.mappable.meta.SpaceTimePoint;
 import com.team142.tode.archive.model.messages.outgoing.rendered.MessageScoreboard;
 import lombok.Data;
 
@@ -33,7 +32,7 @@ public final class Player {
     private final long joinTimeMs;
     private final AtomicInteger kills;
     private final AtomicInteger deaths;
-    private final Tank TANK;
+    private final Tower TANK;
     private final int TAG;
     private final List<Bullet> BULLETS;
     private final String KEY_FORWARD = "W";
@@ -55,7 +54,7 @@ public final class Player {
         this.kills = new AtomicInteger(0);
         this.deaths = new AtomicInteger(0);
         this.TAG = Server.TAGS.incrementAndGet();
-        this.TANK = new Tank(new SpaceTimePoint(0, 0, 0.8), "default", Server.TANK_DEFAULT_SPEED, TAG, 100, this);
+        this.TANK = new Tower(new SpaceTimePoint(0, 0, 0.8), "default", Server.TANK_DEFAULT_SPEED, TAG, 100, this);
         this.name = "";
         this.powers = new ConcurrentHashMap<>();
         Power01Shoot power1Shoot = new Power01Shoot(this);
