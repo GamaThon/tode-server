@@ -4,6 +4,8 @@ import com.team142.tode.model.TDPlayer;
 import com.team142.tode.model.TDServer;
 import org.springframework.web.socket.WebSocketSession;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class TDConnectionManager {
 
     public static void playerConnects(WebSocketSession session) {
@@ -11,6 +13,7 @@ public class TDConnectionManager {
                 .name("Unknown")
                 .id(session.getId())
                 .session(session)
+                .money(new AtomicInteger(0))
                 .build();
         playerConnects(player);
     }

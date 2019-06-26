@@ -1,5 +1,7 @@
 package com.team142.tode.controller.messages;
 
+import com.team142.tode.controller.TDGameManager;
+import com.team142.tode.model.TDGame;
 import com.team142.tode.model.TDPlayer;
 import com.team142.tode.model.TDServer;
 import com.team142.tode.model.TDViewType;
@@ -19,12 +21,21 @@ public class HandlePJoin implements Handler {
     public void handle(String sessionID, String msg) {
         MessagePJoin o = (MessagePJoin) JsonUtils.jsonToObject(msg, MessagePJoin.class);
         TDPlayer me = TDServer.instance.getPlayers().get(sessionID);
-        boolean ok = TDServer.instance.getGames().get(o.getId()).playerJoins(me);
+        TDGame game = TDServer.instance.getGames().get(o.getId());
+        boolean ok = game.playerJoins(me);
         if (!ok) {
             LOG.log(Level.INFO, "Could not join the game: ", o.getId());
             return;
         }
-        me.changePlayerView(TDViewType.LOBBY);
+
+        if (game.isReady()) {
+            TDGameManager.startGame(game);
+
+        } else {
+            me.changePlayerView(TDViewType.LOBBY);
+
+        }
+
 
     }
 }

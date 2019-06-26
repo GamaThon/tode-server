@@ -10,5 +10,12 @@ public class TDGameManager {
             TDServer.instance.getGames().remove(game.getId());
         }
     }
-    
+
+    public static void startGame(TDGame game) {
+        //TODO: change the players vierws
+
+        //TODO: send the map
+        
+
+    }
 }

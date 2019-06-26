@@ -37,4 +37,11 @@ public class TDGame {
         return true;
     }
 
+    public boolean isReady() {
+        return this.players.size() == 2;
+    }
+
+    public int getMoneyRate() {
+        return 1; //TODO: how to handle this...
+    }
 }
