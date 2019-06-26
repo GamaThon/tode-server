@@ -10,6 +10,9 @@ import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * TDRouter handles incoming messages and finds a class to handle the Conversation
+ */
 public class TDRouter {
 
     private static final Logger LOG = Logger.getLogger(TDRouter.class.getName());
@@ -37,12 +40,12 @@ public class TDRouter {
 
     public static void handle(String conversation, String sessionID, String message) {
         Class c = ROUTES.get(conversation);
+        if (c == null) {
+            LOG.log(Level.SEVERE, "Could not handle conversation: " + conversation);
+            return;
+        }
         try {
             Handler o = (Handler) c.getDeclaredConstructor().newInstance();
-            if (o == null) {
-                LOG.log(Level.SEVERE, "Could not handle conversation: " + conversation);
-                return;
-            }
             o.handle(sessionID, message);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             e.printStackTrace();
