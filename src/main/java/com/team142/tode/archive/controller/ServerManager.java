@@ -13,7 +13,6 @@ import com.team142.tode.archive.model.mappable.organic.MapSettings;
 import com.team142.tode.archive.model.messages.incoming.MessageJoinServer;
 import com.team142.tode.archive.model.messages.outgoing.other.MessageListOfGames;
 import com.team142.tode.archive.model.messages.outgoing.other.MessageShareTag;
-import com.team142.tode.view.ViewManager;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.logging.Level;
