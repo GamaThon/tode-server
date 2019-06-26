@@ -9,9 +9,9 @@ import com.team142.tode.archive.controller.GameManager;
 import com.team142.tode.archive.controller.MessageManager;
 import com.team142.tode.archive.controller.SoundManager;
 import com.team142.tode.archive.controller.runnable.TickerPing;
-import com.team142.tode.model.mappable.artificial.Tower;
-import com.team142.tode.model.messages.outgoing.other.MessageGameSummary;
-import com.team142.tode.model.messages.outgoing.other.MessagePlayerLeft;
+import com.team142.tode.archive.model.mappable.artificial.Tower;
+import com.team142.tode.archive.model.messages.outgoing.other.MessageGameSummary;
+import com.team142.tode.archive.model.messages.outgoing.other.MessagePlayerLeft;
 import lombok.Data;
 
 import java.util.List;

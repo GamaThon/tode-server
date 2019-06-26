@@ -5,9 +5,9 @@
  */
 package com.team142.tode.archive.model;
 
-import com.team142.tode.model.mappable.artificial.Tower;
-import com.team142.tode.model.mappable.meta.PlaceableElement;
-import com.team142.tode.model.mappable.meta.SpaceTimePoint;
+import com.team142.tode.archive.model.mappable.artificial.Tower;
+import com.team142.tode.archive.model.mappable.meta.PlaceableElement;
+import com.team142.tode.archive.model.mappable.meta.SpaceTimePoint;
 import com.team142.tode.utils.PhysicsUtils;
 import lombok.Getter;
 import lombok.Setter;

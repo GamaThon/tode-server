@@ -1,6 +1,6 @@
 package com.team142.tode.model;
 
-import com.team142.tode.model.messages.base.Message;
+import com.team142.tode.archive.model.messages.base.Message;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

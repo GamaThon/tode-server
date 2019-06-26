@@ -5,7 +5,7 @@
  */
 package com.team142.tode.archive.model;
 
-import com.team142.tode.model.mappable.organic.MapTileElement;
+import com.team142.tode.archive.model.mappable.organic.MapTileElement;
 import lombok.Data;
 
 import java.util.HashMap;

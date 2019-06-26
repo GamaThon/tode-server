@@ -8,7 +8,7 @@ package com.team142.tode.archive.controller.runnable.powers;
 import com.team142.tode.archive.controller.MessageManager;
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.model.messages.outgoing.rendered.MessageRadar;
+import com.team142.tode.archive.model.messages.outgoing.rendered.MessageRadar;
 
 import static java.lang.Math.toIntExact;
 

@@ -7,9 +7,9 @@ package com.team142.tode.archive.controller;
 
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
-import com.team142.tode.model.messages.base.SoundType;
-import com.team142.tode.model.messages.outgoing.other.MessagePlaySound;
-import com.team142.tode.model.messages.outgoing.rendered.MessageSpeech;
+import com.team142.tode.archive.model.messages.base.SoundType;
+import com.team142.tode.archive.model.messages.outgoing.other.MessagePlaySound;
+import com.team142.tode.archive.model.messages.outgoing.rendered.MessageSpeech;
 import lombok.AllArgsConstructor;
 
 import java.util.concurrent.Executor;

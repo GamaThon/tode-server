@@ -11,9 +11,9 @@ import com.team142.tode.archive.controller.runnable.TickerComms;
 import com.team142.tode.archive.controller.runnable.TickerPhysics;
 import com.team142.tode.archive.controller.runnable.powers.Power;
 import com.team142.tode.archive.controller.runnable.powers.Power01Shoot;
-import com.team142.tode.model.mappable.artificial.Tower;
-import com.team142.tode.model.mappable.meta.SpaceTimePoint;
-import com.team142.tode.model.messages.outgoing.rendered.MessageScoreboard;
+import com.team142.tode.archive.model.mappable.artificial.Tower;
+import com.team142.tode.archive.model.mappable.meta.SpaceTimePoint;
+import com.team142.tode.archive.model.messages.outgoing.rendered.MessageScoreboard;
 import lombok.Data;
 
 import java.util.List;
