@@ -12,6 +12,8 @@ import java.util.logging.Logger;
 
 public class TDRouter {
 
+    private static final Logger LOG = Logger.getLogger(TDRouter.class.getName());
+
     private static final HashMap<String, Class> ROUTES = new HashMap<>();
 
     static {
@@ -26,7 +28,7 @@ public class TDRouter {
     public static void handle(String sessionID, String message) {
         BaseMessage o = (BaseMessage) JsonUtils.jsonToObject(message, BaseMessage.class);
         if (o == null) {
-            Logger.getLogger(TDRouter.class.getName()).log(Level.SEVERE, "Could not handle message: " + message);
+            LOG.log(Level.SEVERE, "Could not handle message: " + message);
             return;
         }
         handle(o.getConversation(), sessionID, message);
@@ -37,6 +39,10 @@ public class TDRouter {
         Class c = ROUTES.get(conversation);
         try {
             Handler o = (Handler) c.getDeclaredConstructor().newInstance();
+            if (o == null) {
+                LOG.log(Level.SEVERE, "Could not handle conversation: " + conversation);
+                return;
+            }
             o.handle(sessionID, message);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             e.printStackTrace();
