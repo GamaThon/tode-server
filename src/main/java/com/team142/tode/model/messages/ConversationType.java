@@ -19,6 +19,7 @@ public enum ConversationType {
     P_SEND,
 
     //From the server to the client
+    S_GAME,
     S_GAMES,
     S_CHANGE_VIEW,
     S_MAP,

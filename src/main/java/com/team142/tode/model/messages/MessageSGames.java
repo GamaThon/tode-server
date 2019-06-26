@@ -6,12 +6,12 @@ import lombok.Getter;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class MessageSGame extends BaseMessage {
+public class MessageSGames extends BaseMessage {
 
     @Getter
     private ArrayList<TDGame> games;
 
-    public MessageSGame(Collection<TDGame> games) {
+    public MessageSGames(Collection<TDGame> games) {
         this.setConversationType(ConversationType.S_GAMES);
         this.games = new ArrayList<>();
         this.games.addAll(games);
