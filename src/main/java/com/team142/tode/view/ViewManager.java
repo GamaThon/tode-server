@@ -5,7 +5,7 @@
  */
 package com.team142.tode.view;
 
-import com.team142.tode.archive.controller.MessageManager;
+import com.team142.tode.model.TDServer;
 import com.team142.tode.model.messages.base.ViewType;
 import com.team142.tode.model.messages.outgoing.other.MessageChangeView;
 
@@ -15,7 +15,7 @@ import com.team142.tode.model.messages.outgoing.other.MessageChangeView;
 public class ViewManager {
 
     public static void changePlayerView(String playerId, ViewType view) {
-        MessageManager.sendPlayerAMessage(playerId, new MessageChangeView(view));
+        TDServer.instance.sendPlayerMessage(playerId, new MessageChangeView(view));
     }
 
 }
