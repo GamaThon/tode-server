@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.socket.WebSocketSession;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -14,15 +15,23 @@ import java.util.concurrent.ConcurrentHashMap;
 @Builder
 public class TDServer {
 
-    private static TDServer instance = TDServer.builder()
+    public static TDServer instance = TDServer.builder()
             .games(new ConcurrentHashMap<>())
             .build();
 
     public ConcurrentHashMap<String, TDGame> games;
     public ConcurrentHashMap<String, TDPlayer> players;
 
+    public static void handleMessage(String id, Object payload) {
+
+    }
+
     public void playerConnects(TDPlayer player) {
         this.players.put(player.getId(), player);
+    }
+
+    public void playerDisconnects(WebSocketSession session) {
+        playerDisconnects(instance.getPlayers().get(session.getId()));
     }
 
     public void playerDisconnects(TDPlayer player) {
