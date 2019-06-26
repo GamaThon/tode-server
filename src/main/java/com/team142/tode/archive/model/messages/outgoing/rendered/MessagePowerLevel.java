@@ -7,13 +7,13 @@ package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.controller.runnable.powers.Power;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 /**
 
  */
-public class MessagePowerLevel extends Message {
+public class MessagePowerLevel extends BaseMessage {
 
     @Getter
     private String key;

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.mappable.meta.PlaceableElement;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
  */
 @JsonInclude(Include.NON_NULL)
-public class MessageShareThingsDynamic extends Message {
+public class MessageShareThingsDynamic extends BaseMessage {
 
     @Getter
     private final ArrayList<PlaceableElement> things = new ArrayList<>();

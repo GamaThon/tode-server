@@ -6,13 +6,13 @@
 package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 /**
 
  */
-public class MessageBullet extends Message {
+public class MessageBullet extends BaseMessage {
 
     @Getter
     private final Bullet BULLET;

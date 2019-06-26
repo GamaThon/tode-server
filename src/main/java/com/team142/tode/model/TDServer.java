@@ -1,6 +1,6 @@
 package com.team142.tode.model;
 
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,12 +36,12 @@ public class TDServer {
     }
 
     public void playerDisconnects(TDPlayer player) {
-        this.games.forEachValue(10, (v) -> v.playerLeaves(player));
+        this.games.forEachValue(2, (v) -> v.playerLeaves(player));
         this.players.remove(player.getId());
     }
 
 
-    public void sendPlayerMessage(String playerId, Message message) {
+    public void sendPlayerMessage(String playerId, BaseMessage message) {
         getPlayers().get(playerId).sendMessage(message);
     }
 }

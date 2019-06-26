@@ -6,14 +6,14 @@
 package com.team142.tode.archive.model.messages.outgoing.other;
 
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
 
  */
-public class MessageIntelChange extends Message {
+public class MessageIntelChange extends BaseMessage {
 
     @Getter
     @Setter

@@ -7,13 +7,13 @@ package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.Orb;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 /**
 
  */
-public class MessageDeleteOrb extends Message {
+public class MessageDeleteOrb extends BaseMessage {
 
     @Getter
     private String name;

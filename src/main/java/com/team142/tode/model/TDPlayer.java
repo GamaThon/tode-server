@@ -1,7 +1,7 @@
 package com.team142.tode.model;
 
 import com.team142.tode.archive.controller.ServerManager;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import com.team142.tode.utils.JsonUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +22,7 @@ public class TDPlayer {
     private String name;
     private WebSocketSession session;
 
-    public void sendMessage(Message message) {
+    public void sendMessage(BaseMessage message) {
         String json = JsonUtils.toJson(message);
         if (session != null) {
             try {
@@ -36,6 +36,6 @@ public class TDPlayer {
     }
 
     public void handleMessage(String msg) {
-        
+
     }
 }

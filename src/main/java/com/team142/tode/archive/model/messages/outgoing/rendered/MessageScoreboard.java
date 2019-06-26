@@ -7,7 +7,7 @@ package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import java.util.Map;
 /**
 
  */
-public class MessageScoreboard extends Message {
+public class MessageScoreboard extends BaseMessage {
 
     @Getter
     private final Map<String, Integer> scores = new HashMap<>();

@@ -11,7 +11,7 @@ import lombok.Getter;
 /**
  *
  */
-public class MessageKey extends Message {
+public class MessageKey extends BaseMessage {
 
     @Getter
     private String key;

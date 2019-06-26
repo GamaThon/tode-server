@@ -7,13 +7,13 @@ package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 /**
 
  */
-public class MessageSpray extends Message {
+public class MessageSpray extends BaseMessage {
 
     @Getter
     private int tagId;

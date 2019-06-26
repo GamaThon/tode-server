@@ -7,7 +7,7 @@ package com.team142.tode.archive.model.messages.outgoing.other;
 
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 import java.util.Collection;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 /**
 
  */
-public class MessageListOfGames extends Message {
+public class MessageListOfGames extends BaseMessage {
 
     @Getter
     private final List<MessageGameSummary> GAMES;

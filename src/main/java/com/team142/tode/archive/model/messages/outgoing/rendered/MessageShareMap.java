@@ -8,7 +8,7 @@ package com.team142.tode.archive.model.messages.outgoing.rendered;
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.mappable.organic.MapTileElement;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 
 import java.util.Collection;
@@ -16,7 +16,7 @@ import java.util.Collection;
 /**
 
  */
-public class MessageShareMap extends Message {
+public class MessageShareMap extends BaseMessage {
 
     @Getter
     private Collection<MapTileElement> map;

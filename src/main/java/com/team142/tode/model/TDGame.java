@@ -23,11 +23,11 @@ public class TDGame {
     }
 
     public boolean playerJoins(TDPlayer player) {
-        if (players.size() < 2) {
-            players.put(player.getId(), player);
-            return true;
+        if (players.size() > 2) {
+            return false;
         }
-        return false;
+        players.put(player.getId(), player);
+        return true;
     }
 
 }

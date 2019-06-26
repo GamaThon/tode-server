@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor
 @Data
-public class Message {
+public class BaseMessage {
 
     private String conversation;
 

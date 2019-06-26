@@ -8,7 +8,7 @@ package com.team142.tode.archive.controller;
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.Repository;
 import com.team142.tode.archive.model.messages.base.ConversationMap;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import com.team142.tode.utils.JsonUtils;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -43,7 +43,7 @@ public class MessageManager {
             return;
         }
 
-        Message body = (Message) JsonUtils.jsonToObject(message, clazz);
+        BaseMessage body = (BaseMessage) JsonUtils.jsonToObject(message, clazz);
         body.setFrom(id);
         if (body instanceof Runnable) {
             ((Runnable) body).run();
@@ -54,12 +54,12 @@ public class MessageManager {
 
     }
 
-    public static void sendPlayersAMessage(Game game, Message message) {
+    public static void sendPlayersAMessage(Game game, BaseMessage message) {
         String json = JsonUtils.toJson(message);
         game.getPlayers().forEach((player) -> sendPlayerAMessage(player.getId(), message));
     }
 
-    public static void sendPlayerAMessage(String playerId, Message message) {
+    public static void sendPlayerAMessage(String playerId, BaseMessage message) {
         String json = JsonUtils.toJson(message);
         WebSocketSession session = Repository.SESSIONS_ON_SERVER.get(playerId);
         sendPlayerAMessage(session, json);

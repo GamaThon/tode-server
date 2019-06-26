@@ -6,7 +6,7 @@
 package com.team142.tode.archive.model.messages.incoming;
 
 import com.team142.tode.archive.controller.GameManager;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,7 +15,7 @@ import lombok.Setter;
 
  */
 @NoArgsConstructor
-public class MessageJoinGame extends Message implements Runnable {
+public class MessageJoinGame extends BaseMessage implements Runnable {
 
     @Getter
     @Setter

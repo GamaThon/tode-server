@@ -7,7 +7,7 @@ package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.mappable.artificial.Tower;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
+import com.team142.tode.model.messages.BaseMessage;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class MessageHealth extends Message {
+public class MessageHealth extends BaseMessage {
 
     private int tag;
     private double maxHealth, health;
