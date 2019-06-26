@@ -10,7 +10,7 @@ import com.team142.tode.model.messages.base.ConversationType;
 import lombok.Getter;
 
 /**
- * @author just1689
+
  */
 public class MessageRadar extends MessageShareThingsDynamic {
 

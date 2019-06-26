@@ -14,7 +14,7 @@ import lombok.Getter;
 import java.util.Collection;
 
 /**
- * @author just1689
+
  */
 public class MessageShareMap extends Message {
 

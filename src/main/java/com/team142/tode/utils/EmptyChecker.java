@@ -6,7 +6,7 @@
 package com.team142.tode.utils;
 
 /**
- * @author just1689
+
  */
 public class EmptyChecker {
 

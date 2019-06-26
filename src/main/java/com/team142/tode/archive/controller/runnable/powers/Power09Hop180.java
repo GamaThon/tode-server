@@ -8,7 +8,7 @@ package com.team142.tode.archive.controller.runnable.powers;
 import com.team142.tode.archive.model.Player;
 
 /**
- * @author just1689
+
  */
 public class Power09Hop180 extends Power {
 

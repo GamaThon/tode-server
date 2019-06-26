@@ -12,7 +12,7 @@ import com.team142.tode.model.messages.base.ViewType;
 import static com.team142.tode.model.messages.base.ConversationType.S_CHANGE_VIEW;
 
 /**
- * @author just1689
+
  */
 public class MessageChangeView extends Message {
 

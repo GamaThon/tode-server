@@ -6,7 +6,7 @@
 package com.team142.tode.model.mappable.organic;
 
 /**
- * @author just1689
+
  */
 public enum SkinType {
     WATER,

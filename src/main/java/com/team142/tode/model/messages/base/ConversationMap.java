@@ -13,7 +13,7 @@ import com.team142.tode.model.messages.incoming.MessageKeyUp;
 import java.util.HashMap;
 
 /**
- * @author just1689
+
  */
 public class ConversationMap {
 

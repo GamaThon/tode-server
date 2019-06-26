@@ -18,7 +18,7 @@ import com.team142.tode.utils.PhysicsUtils;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @author just1689
+
  */
 public class OrbManager {
 

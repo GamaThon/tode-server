@@ -10,7 +10,7 @@ import com.team142.tode.model.mappable.meta.SpaceTimePoint;
 import lombok.Getter;
 
 /**
- * @author just1689
+
  */
 public class MapTileElement extends PlaceableElement {
 

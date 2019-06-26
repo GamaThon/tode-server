@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 
 /**
- * @author just1689
+
  */
 public class DoubleContextualSerializer extends JsonSerializer<Double> implements ContextualSerializer {
 

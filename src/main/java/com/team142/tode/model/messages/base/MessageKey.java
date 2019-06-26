@@ -8,7 +8,7 @@ package com.team142.tode.model.messages.base;
 import lombok.Getter;
 
 /**
- * @author just1689
+
  */
 public class MessageKey extends Message {
 

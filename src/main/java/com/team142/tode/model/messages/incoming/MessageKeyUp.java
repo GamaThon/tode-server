@@ -10,7 +10,7 @@ import com.team142.tode.model.messages.base.ConversationType;
 import com.team142.tode.model.messages.base.MessageKey;
 
 /**
- * @author just1689
+
  */
 public class MessageKeyUp extends MessageKey implements Runnable {
 

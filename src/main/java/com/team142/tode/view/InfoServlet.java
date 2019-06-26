@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * @author just1689
+
  */
 @WebServlet(name = "InfoServlet", urlPatterns = {"/InfoServlet"})
 public class InfoServlet extends HttpServlet {

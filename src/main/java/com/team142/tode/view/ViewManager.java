@@ -10,7 +10,7 @@ import com.team142.tode.model.TDViewType;
 import com.team142.tode.model.messages.outgoing.other.MessageChangeView;
 
 /**
- * @author just1689
+
  */
 public class ViewManager {
 

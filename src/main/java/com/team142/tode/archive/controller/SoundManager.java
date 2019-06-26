@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 /**
- * @author just1689
+
  */
 @AllArgsConstructor
 public class SoundManager {

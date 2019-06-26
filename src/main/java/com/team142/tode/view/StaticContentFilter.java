@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 /**
- * @author just1689
+
  */
 @WebFilter(filterName = "StaticContentFilter", urlPatterns = {"/*"})
 public class StaticContentFilter implements Filter {

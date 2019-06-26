@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author just1689
+
  */
 public class MessageScoreboard extends Message {
 

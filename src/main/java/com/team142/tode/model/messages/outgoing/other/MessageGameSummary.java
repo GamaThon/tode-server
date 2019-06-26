@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Value;
 
 /**
- * @author just1689
+
  */
 @Value
 @AllArgsConstructor

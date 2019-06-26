@@ -13,7 +13,7 @@ import com.team142.tode.model.messages.outgoing.rendered.MessageRadar;
 import static java.lang.Math.toIntExact;
 
 /**
- * @author just1689
+
  */
 public class Power06Radar extends Power {
 

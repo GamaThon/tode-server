@@ -24,7 +24,7 @@ import static com.team142.tode.archive.model.Server.REPORT_STATS;
 import static com.team142.tode.archive.model.Server.SERVER_NAME;
 
 /**
- * @author just1689
+
  */
 public class ServerManager {
 

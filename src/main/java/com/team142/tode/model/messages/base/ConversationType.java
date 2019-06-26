@@ -6,7 +6,7 @@
 package com.team142.tode.model.messages.base;
 
 /**
- * @author just1689
+
  */
 public enum ConversationType {
 

@@ -8,7 +8,7 @@ package com.team142.tode.archive.model;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author just1689
+
  */
 public class Server {
 

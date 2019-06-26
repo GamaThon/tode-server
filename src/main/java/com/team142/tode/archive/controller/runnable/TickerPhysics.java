@@ -9,7 +9,7 @@ import com.team142.tode.archive.model.Player;
 import com.team142.tode.archive.model.Repository;
 
 /**
- * @author just1689
+
  */
 public class TickerPhysics extends AbstractTickerWorker {
 

@@ -12,7 +12,7 @@ import com.team142.tode.archive.model.Repository;
 import com.team142.tode.archive.model.Server;
 
 /**
- * @author just1689
+
  */
 public class Power02RearShoot extends Power {
 

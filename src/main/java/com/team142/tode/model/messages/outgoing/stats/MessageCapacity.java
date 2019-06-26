@@ -9,7 +9,7 @@ import com.team142.tode.archive.model.Server;
 import lombok.Data;
 
 /**
- * @author just1689
+
  */
 @Data
 public class MessageCapacity {

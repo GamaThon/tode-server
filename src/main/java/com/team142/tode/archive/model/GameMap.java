@@ -11,7 +11,7 @@ import lombok.Data;
 import java.util.HashMap;
 
 /**
- * @author just1689
+
  */
 @Data
 public class GameMap {

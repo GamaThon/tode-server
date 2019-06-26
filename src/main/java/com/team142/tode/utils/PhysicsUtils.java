@@ -9,7 +9,7 @@ import com.team142.tode.model.mappable.meta.PlaceableElement;
 import com.team142.tode.model.mappable.meta.SpaceTimePoint;
 
 /**
- * @author just1689
+
  */
 public class PhysicsUtils {
 

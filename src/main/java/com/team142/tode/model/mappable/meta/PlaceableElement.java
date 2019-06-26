@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author just1689
+
  */
 @AllArgsConstructor
 public class PlaceableElement {

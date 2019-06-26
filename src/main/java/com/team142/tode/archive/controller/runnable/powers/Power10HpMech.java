@@ -9,7 +9,7 @@ import com.team142.tode.archive.controller.GameManager;
 import com.team142.tode.archive.model.Player;
 
 /**
- * @author just1689
+
  */
 public class Power10HpMech extends Power {
 

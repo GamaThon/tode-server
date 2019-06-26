@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author just1689
+
  * <p>
  * A game will be where game state is managed.
  */

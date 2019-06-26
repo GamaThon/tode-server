@@ -11,7 +11,7 @@ import com.team142.tode.model.messages.base.Message;
 import lombok.Getter;
 
 /**
- * @author just1689
+
  */
 public class MessageDeleteOrb extends Message {
 

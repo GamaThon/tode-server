@@ -11,7 +11,7 @@ import lombok.Data;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @author just1689
+
  */
 @AllArgsConstructor
 @Data

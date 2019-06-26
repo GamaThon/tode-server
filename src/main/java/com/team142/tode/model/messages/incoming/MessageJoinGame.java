@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @author just1689
+
  */
 @NoArgsConstructor
 public class MessageJoinGame extends Message implements Runnable {

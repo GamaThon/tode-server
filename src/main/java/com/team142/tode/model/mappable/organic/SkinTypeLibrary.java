@@ -8,7 +8,7 @@ package com.team142.tode.model.mappable.organic;
 import java.util.HashMap;
 
 /**
- * @author just1689
+
  */
 public class SkinTypeLibrary {
 

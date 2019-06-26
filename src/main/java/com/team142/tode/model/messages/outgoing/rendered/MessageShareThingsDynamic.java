@@ -16,7 +16,7 @@ import lombok.Getter;
 import java.util.ArrayList;
 
 /**
- * @author just1689
+
  */
 @JsonInclude(Include.NON_NULL)
 public class MessageShareThingsDynamic extends Message {

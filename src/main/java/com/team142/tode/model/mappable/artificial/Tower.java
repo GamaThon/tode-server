@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author just1689
+
  */
 public class Tower extends MovableElement implements Rectangle {
 

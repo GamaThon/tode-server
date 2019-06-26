@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author just1689
+
  */
 public class MessageListOfGames extends Message {
 

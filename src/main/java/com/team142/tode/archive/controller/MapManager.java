@@ -11,7 +11,7 @@ import com.team142.tode.model.mappable.meta.SpaceTimePoint;
 import com.team142.tode.model.mappable.organic.*;
 
 /**
- * @author just1689
+
  */
 public class MapManager {
 
