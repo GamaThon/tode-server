@@ -18,13 +18,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- 
+ *
  */
 public class GameWebSocket implements WebSocketHandler {
 
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
-        TDServer.handleMessage(session.getId(), message.getPayload());
+        TDServer.instance.handleMessage(session.getId(), (String) message.getPayload()); //TODO: does this work?
     }
 
     @Override

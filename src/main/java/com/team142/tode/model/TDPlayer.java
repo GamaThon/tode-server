@@ -1,7 +1,7 @@
 package com.team142.tode.model;
 
 import com.team142.tode.archive.controller.ServerManager;
-import com.team142.tode.archive.model.messages.base.Message;
+import com.team142.tode.model.messages.Message;
 import com.team142.tode.utils.JsonUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,5 +33,9 @@ public class TDPlayer {
                 }
             }
         }
+    }
+
+    public void handleMessage(String msg) {
+        
     }
 }

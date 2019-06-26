@@ -1,6 +1,6 @@
 package com.team142.tode.model;
 
-import com.team142.tode.archive.model.messages.base.Message;
+import com.team142.tode.model.messages.Message;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,8 +23,8 @@ public class TDServer {
     public ConcurrentHashMap<String, TDGame> games;
     public ConcurrentHashMap<String, TDPlayer> players;
 
-    public static void handleMessage(String id, Object payload) {
-
+    public void handleMessage(String sessionId, String payload) {
+        players.get(sessionId).handleMessage(payload);
     }
 
     public void playerConnects(TDPlayer player) {

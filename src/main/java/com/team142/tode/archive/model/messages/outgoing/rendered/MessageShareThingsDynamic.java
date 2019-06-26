@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.mappable.meta.PlaceableElement;
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.archive.model.messages.base.Message;
+import com.team142.tode.model.messages.Message;
 import lombok.Getter;
 
 import java.util.ArrayList;

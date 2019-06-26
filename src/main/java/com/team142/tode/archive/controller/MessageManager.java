@@ -8,7 +8,7 @@ package com.team142.tode.archive.controller;
 import com.team142.tode.archive.model.Game;
 import com.team142.tode.archive.model.Repository;
 import com.team142.tode.archive.model.messages.base.ConversationMap;
-import com.team142.tode.archive.model.messages.base.Message;
+import com.team142.tode.model.messages.Message;
 import com.team142.tode.utils.JsonUtils;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;

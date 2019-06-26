@@ -6,7 +6,7 @@
 package com.team142.tode.archive.model.messages.incoming;
 
 import com.team142.tode.archive.controller.GameManager;
-import com.team142.tode.archive.model.messages.base.Message;
+import com.team142.tode.model.messages.Message;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

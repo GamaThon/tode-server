@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.team142.tode.archive.model.messages.base;
+package com.team142.tode.model.messages;
 
+import com.team142.tode.archive.model.messages.base.ConversationType;
+import com.team142.tode.model.messages.Message;
 import lombok.Getter;
 
 /**
