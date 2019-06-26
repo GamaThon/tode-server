@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TDGame {
 
     private String id;
-    private String title;
+    private String name;
 
     @JsonIgnore
     private String map;
