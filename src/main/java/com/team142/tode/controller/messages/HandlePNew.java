@@ -32,9 +32,7 @@ public class HandlePNew implements Handler {
             LOG.log(Level.SEVERE, "Unexpectedly cant join own game!");
             return;
         }
-
         me.changePlayerView(TDViewType.LOBBY);
-
 
     }
 }
