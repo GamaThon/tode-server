@@ -6,8 +6,8 @@
 package com.team142.tode.archive.model.messages.outgoing.other;
 
 import com.team142.tode.archive.model.messages.base.ConversationType;
-import com.team142.tode.model.messages.Message;
 import com.team142.tode.archive.model.messages.base.SoundType;
+import com.team142.tode.model.messages.Message;
 import lombok.Getter;
 
 /**
