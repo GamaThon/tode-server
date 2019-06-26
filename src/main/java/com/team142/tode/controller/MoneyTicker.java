@@ -1,6 +1,7 @@
 package com.team142.tode.controller;
 
 import com.team142.tode.model.TDGame;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MoneyTicker implements Runnable {
@@ -25,5 +26,9 @@ public class MoneyTicker implements Runnable {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void stop() {
+        this.keepOnKeepingOn.set(false);
     }
 }

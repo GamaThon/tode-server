@@ -8,8 +8,16 @@ public class TDGameManager {
 
     public static void checkGame(TDGame game) {
         if (game.getPlayers().isEmpty()) {
-            TDServer.instance.getGames().remove(game.getId());
+            stopAndRemoveGame(game);
         }
+    }
+
+    public static void stopAndRemoveGame(TDGame game) {
+        TDServer.instance.getGames().remove(game.getId());
+        if (game.getMoneyTicker() != null) {
+            game.getMoneyTicker().stop();
+        }
+
     }
 
     public static void startGame(TDGame game) {
