@@ -6,7 +6,7 @@
 package com.team142.tode.model.messages;
 
 /**
-
+ *
  */
 public enum ConversationType {
 
@@ -24,12 +24,5 @@ public enum ConversationType {
     S_MAP,
     S_SHARE_TAG,
 
-//    S_SCOREBOARD,
-//    S_PLAYER_LEFT,
-//    S_SHARE_COOLDOWN,
-//    S_P_LEVEL,
-//    S_SHARE_RADAR,
-//    S_SHARE_HEALTH,
-//    S_SHARE_SPEECH
 
 }
