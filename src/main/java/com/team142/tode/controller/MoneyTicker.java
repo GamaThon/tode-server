@@ -14,6 +14,7 @@ public class MoneyTicker implements Runnable, Stoppable {
     public MoneyTicker(TDGame game, long interval) {
         this.game = game;
         this.interval = interval;
+        this.keepOnKeepingOn = new AtomicBoolean(true);
     }
 
     @Override
