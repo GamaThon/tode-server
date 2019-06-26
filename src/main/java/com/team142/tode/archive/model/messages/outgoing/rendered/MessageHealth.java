@@ -6,7 +6,7 @@
 package com.team142.tode.archive.model.messages.outgoing.rendered;
 
 import com.team142.tode.archive.model.mappable.artificial.Tower;
-import com.team142.tode.archive.model.messages.base.ConversationType;
+import com.team142.tode.model.messages.ConversationType;
 import com.team142.tode.model.messages.BaseMessage;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

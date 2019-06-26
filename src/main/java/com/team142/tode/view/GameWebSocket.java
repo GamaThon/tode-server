@@ -6,6 +6,7 @@
 package com.team142.tode.view;
 
 
+import com.team142.tode.controller.TDRouter;
 import com.team142.tode.model.TDPlayer;
 import com.team142.tode.model.TDServer;
 import org.springframework.web.socket.CloseStatus;
@@ -24,7 +25,7 @@ public class GameWebSocket implements WebSocketHandler {
 
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
-        TDServer.instance.handleMessage(session.getId(), (String) message.getPayload()); //TODO: does this work?
+        TDRouter.handle(session.getId(), (String) message.getPayload()); //TODO: does this work?
     }
 
     @Override

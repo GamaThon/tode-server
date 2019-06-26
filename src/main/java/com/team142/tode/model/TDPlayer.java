@@ -36,6 +36,8 @@ public class TDPlayer {
     }
 
     public void handleMessage(String msg) {
+        JsonUtils.jsonToObject(msg, BaseMessage.class);
+
 
     }
 

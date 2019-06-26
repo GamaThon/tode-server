@@ -32,7 +32,7 @@ public class TDServer {
     }
 
     public void playerDisconnects(WebSocketSession session) {
-        playerDisconnects(instance.getPlayers().get(session.getId()));
+        playerDisconnects(players.get(session.getId()));
     }
 
     public void playerDisconnects(TDPlayer player) {

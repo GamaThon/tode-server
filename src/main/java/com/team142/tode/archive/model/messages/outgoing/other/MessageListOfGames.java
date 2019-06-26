@@ -6,7 +6,7 @@
 package com.team142.tode.archive.model.messages.outgoing.other;
 
 import com.team142.tode.archive.model.Game;
-import com.team142.tode.archive.model.messages.base.ConversationType;
+import com.team142.tode.model.messages.ConversationType;
 import com.team142.tode.model.messages.BaseMessage;
 import lombok.Getter;
 

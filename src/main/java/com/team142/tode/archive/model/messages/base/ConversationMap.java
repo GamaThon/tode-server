@@ -9,6 +9,7 @@ import com.team142.tode.archive.model.messages.incoming.MessageJoinGame;
 import com.team142.tode.archive.model.messages.incoming.MessageJoinServer;
 import com.team142.tode.archive.model.messages.incoming.MessageKeyDown;
 import com.team142.tode.archive.model.messages.incoming.MessageKeyUp;
+import com.team142.tode.model.messages.ConversationType;
 
 import java.util.HashMap;
 

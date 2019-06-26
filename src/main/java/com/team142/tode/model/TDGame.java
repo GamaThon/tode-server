@@ -20,6 +20,13 @@ public class TDGame {
 
     public void playerLeaves(TDPlayer player) {
         players.remove(player.getId());
+        checkGame();
+    }
+
+    private void checkGame() {
+        if (players.isEmpty()) {
+            TDServer.instance.games.remove(id);
+        }
     }
 
     public boolean playerJoins(TDPlayer player) {

@@ -5,7 +5,6 @@
  */
 package com.team142.tode.model.messages;
 
-import com.team142.tode.archive.model.messages.base.ConversationType;
 import lombok.Getter;
 
 /**

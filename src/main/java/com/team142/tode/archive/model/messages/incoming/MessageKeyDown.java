@@ -6,7 +6,7 @@
 package com.team142.tode.archive.model.messages.incoming;
 
 import com.team142.tode.archive.controller.PlayerManager;
-import com.team142.tode.archive.model.messages.base.ConversationType;
+import com.team142.tode.model.messages.ConversationType;
 import com.team142.tode.model.messages.MessageKey;
 
 /**
