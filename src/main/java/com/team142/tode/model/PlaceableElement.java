@@ -5,23 +5,20 @@
  */
 package com.team142.tode.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author just1689
  */
+@Data
+@Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class PlaceableElement {
 
-    @Getter
-    private final int TAG;
-    @Getter
-    @Setter
+    private int tag;
     private SpaceTimePoint point;
-    @Getter
-    @Setter
     private String skin;
+    private String model;
 
 }

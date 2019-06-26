@@ -1,9 +1,11 @@
 package com.team142.tode.controller.ticker;
 
-import com.team142.tode.controller.ticker.Stoppable;
+
+import lombok.Data;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+@Data
 public abstract class BaseTower implements Runnable, Stoppable {
 
     private String gameID;
