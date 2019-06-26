@@ -10,10 +10,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.team142.tode.archive.model.Server;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -22,7 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
-
+ *
  */
 public class JsonUtils {
 
@@ -33,9 +31,9 @@ public class JsonUtils {
         OBJECT_MAPPER.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         OBJECT_MAPPER.setVisibility(VisibilityChecker.Std.defaultInstance().withFieldVisibility(JsonAutoDetect.Visibility.ANY));
 
-        if (Server.DEBUG_ON) {
-            OBJECT_MAPPER.enable(SerializationFeature.INDENT_OUTPUT);
-        }
+//        if (Server.DEBUG_ON) {
+//            OBJECT_MAPPER.enable(SerializationFeature.INDENT_OUTPUT);
+//        }
 
     }
 

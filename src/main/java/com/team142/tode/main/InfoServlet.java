@@ -5,9 +5,6 @@
  */
 package com.team142.tode.main;
 
-import com.team142.tode.archive.model.Repository;
-import com.team142.tode.utils.JsonUtils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,10 +41,10 @@ public class InfoServlet extends HttpServlet {
             out.println("<body>");
 
             out.println("<h1>Players</h1>");
-            out.println(JsonUtils.toJson(Repository.PLAYERS_ON_SERVER.values()));
+//            out.println(JsonUtils.toJson(Repository.PLAYERS_ON_SERVER.values()));
 
             out.println("<h1>Games</h1>");
-            out.println(JsonUtils.toJson(Repository.GAMES_ON_SERVER.values()));
+//            out.println(JsonUtils.toJson(Repository.GAMES_ON_SERVER.values()));
 
             out.println("</body>");
             out.println("</html>");

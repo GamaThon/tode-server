@@ -1,13 +1,13 @@
 package com.team142.tode.utils;
 
-import com.team142.tode.archive.model.mappable.meta.PlaceableElement;
+import com.team142.tode.model.PlaceableElement;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-import static com.team142.tode.archive.model.mappable.meta.MovableElement.MAX_ROTATE;
-
 public class MathUtils {
+
+    public static final float MAX_ROTATE = (float) (Math.PI * 2);
 
     public static double getRadiusFromElement(PlaceableElement element) {
         return element.getPoint().getRadius();

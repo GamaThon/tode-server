@@ -1,8 +1,8 @@
 package com.team142.tode.model;
 
 import com.team142.tode.controller.TDConnectionManager;
-import com.team142.tode.model.messages.MessageSChangeView;
 import com.team142.tode.model.messages.BaseMessage;
+import com.team142.tode.model.messages.MessageSChangeView;
 import com.team142.tode.utils.JsonUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
