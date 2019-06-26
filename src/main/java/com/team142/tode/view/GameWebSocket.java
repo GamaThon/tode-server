@@ -6,9 +6,8 @@
 package com.team142.tode.view;
 
 
+import com.team142.tode.controller.TDConnectionManager;
 import com.team142.tode.controller.TDRouter;
-import com.team142.tode.model.TDPlayer;
-import com.team142.tode.model.TDServer;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.WebSocketMessage;
@@ -30,19 +29,13 @@ public class GameWebSocket implements WebSocketHandler {
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        TDPlayer player = TDPlayer.builder()
-                .name("Unknown")
-                .id(session.getId())
-                .session(session)
-                .build();
-        TDServer.instance.playerConnects(player);
-
+        TDConnectionManager.playerConnects(session);
     }
 
     @Override
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         if (!session.isOpen()) {
-            TDServer.instance.playerDisconnects(session);
+            TDConnectionManager.playerDisconnects(session);
         }
         if (!(exception instanceof EOFException)) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Unknown Error at websocket:", exception);
@@ -51,7 +44,7 @@ public class GameWebSocket implements WebSocketHandler {
 
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus closeStatus) throws Exception {
-        TDServer.instance.playerDisconnects(session);
+        TDConnectionManager.playerDisconnects(session);
     }
 
     @Override

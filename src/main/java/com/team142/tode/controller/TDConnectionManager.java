@@ -6,11 +6,21 @@ import org.springframework.web.socket.WebSocketSession;
 
 public class TDConnectionManager {
 
-    public static void playerConnects(TDPlayer player) {
+    public static void playerConnects(WebSocketSession session) {
+        TDPlayer player = TDPlayer.builder()
+                .name("Unknown")
+                .id(session.getId())
+                .session(session)
+                .build();
+        playerConnects(player);
+    }
+
+
+    private static void playerConnects(TDPlayer player) {
         TDServer.instance.getPlayers().put(player.getId(), player);
     }
 
-    public void playerDisconnects(WebSocketSession session) {
+    public static void playerDisconnects(WebSocketSession session) {
         playerDisconnects(TDServer.instance.getPlayers().get(session.getId()));
     }
 
