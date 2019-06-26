@@ -14,6 +14,7 @@ public enum ConversationType {
     P_NAME,
     P_LIST,
     P_JOIN,
+    P_NEW,
     P_PLACE,
     P_SEND,
 
