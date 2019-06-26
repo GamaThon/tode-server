@@ -21,6 +21,7 @@ public class TDRouter {
 
     static {
         ROUTES.put(ConversationType.P_NAME.name(), HandlePName.class);
+        ROUTES.put(ConversationType.P_NEW.name(), HandlePNew.class);
         ROUTES.put(ConversationType.P_JOIN.name(), HandlePJoin.class);
         ROUTES.put(ConversationType.P_LIST.name(), HandlePList.class);
         ROUTES.put(ConversationType.P_PLACE.name(), HandlePPlace.class);
