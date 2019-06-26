@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.team142.tode.view;
+package com.team142.tode.main;
 
 
 import com.team142.tode.controller.TDConnectionManager;
