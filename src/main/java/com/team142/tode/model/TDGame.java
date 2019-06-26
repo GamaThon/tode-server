@@ -1,5 +1,6 @@
 package com.team142.tode.model;
 
+import com.team142.tode.controller.TDGameManager;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,14 +21,9 @@ public class TDGame {
 
     public void playerLeaves(TDPlayer player) {
         players.remove(player.getId());
-        checkGame();
+        TDGameManager.checkGame(this);
     }
 
-    private void checkGame() {
-        if (players.isEmpty()) {
-            TDServer.instance.games.remove(id);
-        }
-    }
 
     public boolean playerJoins(TDPlayer player) {
         if (players.size() > 2) {
