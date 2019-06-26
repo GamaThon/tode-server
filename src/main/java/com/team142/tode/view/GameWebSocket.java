@@ -5,7 +5,7 @@
  */
 package com.team142.tode.view;
 
-import com.team142.tode.archive.model.Server;
+
 import com.team142.tode.model.TDPlayer;
 import com.team142.tode.model.TDServer;
 import org.springframework.web.socket.CloseStatus;
@@ -44,7 +44,7 @@ public class GameWebSocket implements WebSocketHandler {
             TDServer.instance.playerDisconnects(session);
         }
         if (!(exception instanceof EOFException)) {
-            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, "Unknown Error at websocket:", exception);
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Unknown Error at websocket:", exception);
         }
     }
 
