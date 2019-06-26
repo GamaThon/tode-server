@@ -5,7 +5,6 @@
  */
 package com.team142.tode.view;
 
-import com.team142.tode.archive.controller.ServerManager;
 import com.team142.tode.archive.model.Server;
 import com.team142.tode.model.TDPlayer;
 import com.team142.tode.model.TDServer;
