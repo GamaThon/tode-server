@@ -1,6 +1,7 @@
 package com.team142.tode.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.team142.tode.controller.MoneyTicker;
 import com.team142.tode.controller.TDGameManager;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,6 +23,9 @@ public class TDGame {
     private String map;
     @JsonIgnore
     private ConcurrentHashMap<String, TDPlayer> players;
+
+    @JsonIgnore
+    private MoneyTicker moneyTicker;
 
     public void playerLeaves(TDPlayer player) {
         players.remove(player.getId());
