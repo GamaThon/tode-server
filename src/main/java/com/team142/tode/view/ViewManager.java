@@ -5,7 +5,7 @@
  */
 package com.team142.tode.view;
 
-import com.team142.tode.archive.model.messages.outgoing.other.MessageChangeView;
+import com.team142.tode.model.messages.MessageChangeView;
 import com.team142.tode.model.TDServer;
 import com.team142.tode.model.TDViewType;
 

@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.team142.tode.archive.model.messages.outgoing.other;
+package com.team142.tode.model.messages;
 
 import com.team142.tode.model.TDViewType;
-import com.team142.tode.model.messages.BaseMessage;
 
 import static com.team142.tode.archive.model.messages.base.ConversationType.S_CHANGE_VIEW;
 
 /**
-
+ *
  */
 public class MessageChangeView extends BaseMessage {
 
