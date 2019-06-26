@@ -33,7 +33,7 @@ public class HandlePNew implements Handler {
             return;
         }
 
-        me.changePlayerView(TDViewType.GAMING);
+        me.changePlayerView(TDViewType.LOBBY);
 
 
     }
