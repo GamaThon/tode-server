@@ -1,8 +1,10 @@
-package com.team142.tode.controller.towers;
+package com.team142.tode.controller.ticker;
+
+import com.team142.tode.controller.ticker.Stoppable;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public abstract class BaseTower implements Runnable {
+public abstract class BaseTower implements Runnable, Stoppable {
 
     private String gameID;
     private AtomicBoolean keepOnKeepingOn;
@@ -29,4 +31,10 @@ public abstract class BaseTower implements Runnable {
             }
         }
     }
+
+    public void stop() {
+        this.keepOnKeepingOn.set(false);
+    }
+
+
 }

@@ -1,12 +1,12 @@
-package com.team142.tode.controller.towers;
+package com.team142.tode.controller.ticker;
 
 import com.team142.tode.model.TDGame;
 
-public class TowerExample extends BaseTower {
+public class TowerTickerExample extends BaseTower {
 
     private static long initialTicker = 1000;
 
-    public TowerExample(TDGame game) {
+    public TowerTickerExample(TDGame game) {
         super(game.getId(), initialTicker);
     }
 

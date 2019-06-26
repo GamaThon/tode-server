@@ -1,7 +1,7 @@
-package com.team142.tode.controller;
+package com.team142.tode.controller.ticker;
 
+import com.team142.tode.controller.ticker.Stoppable;
 import com.team142.tode.model.TDGame;
-import javafx.scene.paint.Stop;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
