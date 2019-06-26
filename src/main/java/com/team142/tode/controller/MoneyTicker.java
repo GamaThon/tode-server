@@ -1,10 +1,11 @@
 package com.team142.tode.controller;
 
 import com.team142.tode.model.TDGame;
+import javafx.scene.paint.Stop;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class MoneyTicker implements Runnable {
+public class MoneyTicker implements Runnable, Stoppable {
 
     private final TDGame game;
     private final long interval;
@@ -28,6 +29,7 @@ public class MoneyTicker implements Runnable {
         }
     }
 
+    @Override
     public void stop() {
         this.keepOnKeepingOn.set(false);
     }
