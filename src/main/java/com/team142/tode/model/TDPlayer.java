@@ -1,7 +1,7 @@
 package com.team142.tode.model;
 
 import com.team142.tode.controller.TDConnectionManager;
-import com.team142.tode.model.messages.MessageChangeView;
+import com.team142.tode.model.messages.MessageSChangeView;
 import com.team142.tode.model.messages.BaseMessage;
 import com.team142.tode.utils.JsonUtils;
 import lombok.AllArgsConstructor;
@@ -37,7 +37,7 @@ public class TDPlayer {
     }
 
     public void changePlayerView(TDViewType view) {
-        sendMessage(new MessageChangeView(view));
+        sendMessage(new MessageSChangeView(view));
     }
 
 

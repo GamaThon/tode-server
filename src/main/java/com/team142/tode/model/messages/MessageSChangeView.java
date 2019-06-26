@@ -12,11 +12,11 @@ import static com.team142.tode.model.messages.ConversationType.S_CHANGE_VIEW;
 /**
  *
  */
-public class MessageChangeView extends BaseMessage {
+public class MessageSChangeView extends BaseMessage {
 
     private final TDViewType view;
 
-    public MessageChangeView(TDViewType view) {
+    public MessageSChangeView(TDViewType view) {
         this.view = view;
         setConversation(S_CHANGE_VIEW.name());
 
