@@ -1,6 +1,6 @@
 package com.team142.tode.model;
 
-import com.team142.tode.archive.controller.ServerManager;
+import com.team142.tode.archive.model.messages.outgoing.other.MessageChangeView;
 import com.team142.tode.model.messages.BaseMessage;
 import com.team142.tode.utils.JsonUtils;
 import lombok.AllArgsConstructor;
@@ -23,13 +23,13 @@ public class TDPlayer {
     private WebSocketSession session;
 
     public void sendMessage(BaseMessage message) {
-        String json = JsonUtils.toJson(message);
         if (session != null) {
             try {
+                String json = JsonUtils.toJson(message);
                 session.sendMessage(new TextMessage(json));
             } catch (Exception ex) {
                 if (ex instanceof EOFException) {
-                    ServerManager.checkSession(session);
+                    TDServer.instance.playerDisconnects(this);
                 }
             }
         }
@@ -38,4 +38,10 @@ public class TDPlayer {
     public void handleMessage(String msg) {
 
     }
+
+    public void changePlayerView(TDViewType view) {
+        TDServer.instance.sendPlayerMessage(id, new MessageChangeView(view));
+    }
+
+
 }

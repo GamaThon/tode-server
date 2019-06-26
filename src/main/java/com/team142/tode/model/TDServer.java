@@ -40,7 +40,6 @@ public class TDServer {
         this.players.remove(player.getId());
     }
 
-
     public void sendPlayerMessage(String playerId, BaseMessage message) {
         getPlayers().get(playerId).sendMessage(message);
     }
