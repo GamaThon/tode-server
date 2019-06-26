@@ -10,6 +10,5 @@ public class TDGameManager {
             TDServer.instance.getGames().remove(game.getId());
         }
     }
-
-
+    
 }
