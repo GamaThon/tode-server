@@ -1,5 +1,6 @@
 package com.team142.tode.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.team142.tode.controller.TDGameManager;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +17,10 @@ public class TDGame {
 
     private String id;
     private String title;
+
+    @JsonIgnore
     private String map;
+    @JsonIgnore
     private ConcurrentHashMap<String, TDPlayer> players;
 
     public void playerLeaves(TDPlayer player) {
