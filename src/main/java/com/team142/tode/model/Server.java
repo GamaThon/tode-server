@@ -19,7 +19,7 @@ public class Server {
             .build();
 
     private ConcurrentHashMap<String, Game> games;
-    private ConcurrentHashMap<String, TDPlayer> players;
+    private ConcurrentHashMap<String, Player> players;
 
 
 }

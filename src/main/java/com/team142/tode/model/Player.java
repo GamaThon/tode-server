@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @NoArgsConstructor
 @Data
 @Builder
-public class TDPlayer {
+public class Player {
 
     private String id;
     private String name;

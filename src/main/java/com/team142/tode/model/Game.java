@@ -22,18 +22,18 @@ public class Game {
     @JsonIgnore
     private String map;
     @JsonIgnore
-    private ConcurrentHashMap<String, TDPlayer> players;
+    private ConcurrentHashMap<String, Player> players;
 
     @JsonIgnore
     private MoneyTicker moneyTicker;
 
-    public void playerLeaves(TDPlayer player) {
+    public void playerLeaves(Player player) {
         players.remove(player.getId());
         GameManager.checkGame(this);
     }
 
 
-    public boolean playerJoins(TDPlayer player) {
+    public boolean playerJoins(Player player) {
         if (players.size() > 2) {
             return false;
         }

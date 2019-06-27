@@ -1,4 +1,4 @@
-package com.team142.tode.model;
+package com.team142.tode.model.map;
 
 public interface Rectangle {
     double width = 0;

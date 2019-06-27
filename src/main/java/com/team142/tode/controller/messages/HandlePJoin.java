@@ -2,7 +2,7 @@ package com.team142.tode.controller.messages;
 
 import com.team142.tode.controller.GameManager;
 import com.team142.tode.model.Game;
-import com.team142.tode.model.TDPlayer;
+import com.team142.tode.model.Player;
 import com.team142.tode.model.Server;
 import com.team142.tode.model.ViewType;
 import com.team142.tode.model.messages.MessagePJoin;
@@ -20,7 +20,7 @@ public class HandlePJoin implements Handler {
     @Override
     public void handle(String sessionID, String msg) {
         MessagePJoin o = (MessagePJoin) JsonUtils.jsonToObject(msg, MessagePJoin.class);
-        TDPlayer me = Server.instance.getPlayers().get(sessionID);
+        Player me = Server.instance.getPlayers().get(sessionID);
         Game game = Server.instance.getGames().get(o.getId());
         boolean ok = game.playerJoins(me);
         if (!ok) {

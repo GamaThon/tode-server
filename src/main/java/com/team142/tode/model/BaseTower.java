@@ -2,8 +2,8 @@ package com.team142.tode.model;
 
 
 import com.team142.tode.controller.ticker.Ticker;
+import com.team142.tode.model.map.PlaceableElement;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

@@ -1,7 +1,7 @@
 package com.team142.tode.controller.messages;
 
 import com.team142.tode.model.Game;
-import com.team142.tode.model.TDPlayer;
+import com.team142.tode.model.Player;
 import com.team142.tode.model.Server;
 import com.team142.tode.model.ViewType;
 import com.team142.tode.model.messages.MessagePName;
@@ -19,7 +19,7 @@ public class HandlePNew implements Handler {
 
     @Override
     public void handle(String sessionID, String msg) {
-        TDPlayer me = Server.instance.getPlayers().get(sessionID);
+        Player me = Server.instance.getPlayers().get(sessionID);
         MessagePName o = (MessagePName) JsonUtils.jsonToObject(msg, MessagePName.class);
         Game game = Game.builder()
                 .id(UUID.randomUUID().toString())

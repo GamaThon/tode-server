@@ -1,4 +1,4 @@
-package com.team142.tode.model;
+package com.team142.tode.model.map;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

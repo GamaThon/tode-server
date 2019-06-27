@@ -5,8 +5,8 @@
  */
 package com.team142.tode.utils;
 
-import com.team142.tode.model.PlaceableElement;
-import com.team142.tode.model.SpaceTimePoint;
+import com.team142.tode.model.map.PlaceableElement;
+import com.team142.tode.model.map.SpaceTimePoint;
 
 /**
 

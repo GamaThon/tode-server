@@ -1,6 +1,6 @@
 package com.team142.tode.utils;
 
-import com.team142.tode.model.PlaceableElement;
+import com.team142.tode.model.map.PlaceableElement;
 
 import java.util.Arrays;
 import java.util.Comparator;

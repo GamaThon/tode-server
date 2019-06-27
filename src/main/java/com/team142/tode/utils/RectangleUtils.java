@@ -1,7 +1,7 @@
 package com.team142.tode.utils;
 
 
-import com.team142.tode.model.Rectangle;
+import com.team142.tode.model.map.Rectangle;
 
 public class RectangleUtils {
 
