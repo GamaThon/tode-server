@@ -5,7 +5,7 @@
  */
 package com.team142.tode.model.messages;
 
-import com.team142.tode.model.TDViewType;
+import com.team142.tode.model.ViewType;
 
 import static com.team142.tode.model.messages.ConversationType.S_CHANGE_VIEW;
 
@@ -14,9 +14,9 @@ import static com.team142.tode.model.messages.ConversationType.S_CHANGE_VIEW;
  */
 public class MessageSChangeView extends BaseMessage {
 
-    private final TDViewType view;
+    private final ViewType view;
 
-    public MessageSChangeView(TDViewType view) {
+    public MessageSChangeView(ViewType view) {
         this.view = view;
         setConversation(S_CHANGE_VIEW.name());
 

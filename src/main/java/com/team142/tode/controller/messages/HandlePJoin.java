@@ -1,10 +1,10 @@
 package com.team142.tode.controller.messages;
 
-import com.team142.tode.controller.TDGameManager;
-import com.team142.tode.model.TDGame;
+import com.team142.tode.controller.GameManager;
+import com.team142.tode.model.Game;
 import com.team142.tode.model.TDPlayer;
-import com.team142.tode.model.TDServer;
-import com.team142.tode.model.TDViewType;
+import com.team142.tode.model.Server;
+import com.team142.tode.model.ViewType;
 import com.team142.tode.model.messages.MessagePJoin;
 import com.team142.tode.utils.JsonUtils;
 import lombok.NoArgsConstructor;
@@ -20,8 +20,8 @@ public class HandlePJoin implements Handler {
     @Override
     public void handle(String sessionID, String msg) {
         MessagePJoin o = (MessagePJoin) JsonUtils.jsonToObject(msg, MessagePJoin.class);
-        TDPlayer me = TDServer.instance.getPlayers().get(sessionID);
-        TDGame game = TDServer.instance.getGames().get(o.getId());
+        TDPlayer me = Server.instance.getPlayers().get(sessionID);
+        Game game = Server.instance.getGames().get(o.getId());
         boolean ok = game.playerJoins(me);
         if (!ok) {
             LOG.log(Level.INFO, "Could not join the game: ", o.getId());
@@ -29,10 +29,10 @@ public class HandlePJoin implements Handler {
         }
 
         if (game.isReady()) {
-            TDGameManager.startGame(game);
+            GameManager.startGame(game);
 
         } else {
-            me.changePlayerView(TDViewType.LOBBY);
+            me.changePlayerView(ViewType.LOBBY);
 
         }
 

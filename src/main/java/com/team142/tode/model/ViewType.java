@@ -1,6 +1,6 @@
 package com.team142.tode.model;
 
-public enum TDViewType {
+public enum ViewType {
 
     NAMING,     // Set your name screen
     MATCHING,   // See matches to join

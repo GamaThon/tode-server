@@ -2,7 +2,7 @@ package com.team142.tode.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.team142.tode.controller.ticker.MoneyTicker;
-import com.team142.tode.controller.TDGameManager;
+import com.team142.tode.controller.GameManager;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @NoArgsConstructor
 @Builder
 @Data
-public class TDGame {
+public class Game {
 
     private String id;
     private String name;
@@ -29,7 +29,7 @@ public class TDGame {
 
     public void playerLeaves(TDPlayer player) {
         players.remove(player.getId());
-        TDGameManager.checkGame(this);
+        GameManager.checkGame(this);
     }
 
 

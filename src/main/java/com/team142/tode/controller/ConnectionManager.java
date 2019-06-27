@@ -1,12 +1,12 @@
 package com.team142.tode.controller;
 
 import com.team142.tode.model.TDPlayer;
-import com.team142.tode.model.TDServer;
+import com.team142.tode.model.Server;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class TDConnectionManager {
+public class ConnectionManager {
 
     public static void playerConnects(WebSocketSession session) {
         TDPlayer player = TDPlayer.builder()
@@ -20,16 +20,16 @@ public class TDConnectionManager {
 
 
     private static void playerConnects(TDPlayer player) {
-        TDServer.instance.getPlayers().put(player.getId(), player);
+        Server.instance.getPlayers().put(player.getId(), player);
     }
 
     public static void playerDisconnects(WebSocketSession session) {
-        playerDisconnects(TDServer.instance.getPlayers().get(session.getId()));
+        playerDisconnects(Server.instance.getPlayers().get(session.getId()));
     }
 
     public static void playerDisconnects(TDPlayer player) {
-        TDServer.instance.getGames().forEachValue(2, (v) -> v.playerLeaves(player));
-        TDServer.instance.getPlayers().remove(player.getId());
+        Server.instance.getGames().forEachValue(2, (v) -> v.playerLeaves(player));
+        Server.instance.getPlayers().remove(player.getId());
     }
 
 }

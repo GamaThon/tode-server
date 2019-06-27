@@ -12,13 +12,13 @@ import java.util.concurrent.ConcurrentHashMap;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TDServer {
+public class Server {
 
-    public static TDServer instance = TDServer.builder()
+    public static Server instance = Server.builder()
             .games(new ConcurrentHashMap<>())
             .build();
 
-    private ConcurrentHashMap<String, TDGame> games;
+    private ConcurrentHashMap<String, Game> games;
     private ConcurrentHashMap<String, TDPlayer> players;
 
 

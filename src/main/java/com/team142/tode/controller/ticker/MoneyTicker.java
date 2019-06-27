@@ -1,17 +1,16 @@
 package com.team142.tode.controller.ticker;
 
-import com.team142.tode.controller.ticker.Stoppable;
-import com.team142.tode.model.TDGame;
+import com.team142.tode.model.Game;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MoneyTicker implements Runnable, Stoppable {
 
-    private final TDGame game;
+    private final Game game;
     private final long interval;
     private AtomicBoolean keepOnKeepingOn;
 
-    public MoneyTicker(TDGame game, long interval) {
+    public MoneyTicker(Game game, long interval) {
         this.game = game;
         this.interval = interval;
         this.keepOnKeepingOn = new AtomicBoolean(true);

@@ -5,17 +5,16 @@ import com.team142.tode.model.messages.BaseMessage;
 import com.team142.tode.model.messages.ConversationType;
 import com.team142.tode.utils.JsonUtils;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * TDRouter handles incoming messages and finds a class to handle the Conversation
+ * RouterManager handles incoming messages and finds a class to handle the Conversation
  */
-public class TDRouter {
+public class RouterManager {
 
-    private static final Logger LOG = Logger.getLogger(TDRouter.class.getName());
+    private static final Logger LOG = Logger.getLogger(RouterManager.class.getName());
 
     private static final HashMap<String, Handler> ROUTES = new HashMap<>();
 

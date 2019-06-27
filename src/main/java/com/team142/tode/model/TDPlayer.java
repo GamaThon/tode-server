@@ -1,6 +1,6 @@
 package com.team142.tode.model;
 
-import com.team142.tode.controller.TDConnectionManager;
+import com.team142.tode.controller.ConnectionManager;
 import com.team142.tode.model.messages.BaseMessage;
 import com.team142.tode.model.messages.MessageSChangeView;
 import com.team142.tode.utils.JsonUtils;
@@ -32,13 +32,13 @@ public class TDPlayer {
                 session.sendMessage(new TextMessage(json));
             } catch (Exception ex) {
                 if (ex instanceof EOFException) {
-                    TDConnectionManager.playerDisconnects(this);
+                    ConnectionManager.playerDisconnects(this);
                 }
             }
         }
     }
 
-    public void changePlayerView(TDViewType view) {
+    public void changePlayerView(ViewType view) {
         sendMessage(new MessageSChangeView(view));
     }
 

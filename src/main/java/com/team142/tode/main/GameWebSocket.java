@@ -6,8 +6,8 @@
 package com.team142.tode.main;
 
 
-import com.team142.tode.controller.TDConnectionManager;
-import com.team142.tode.controller.TDRouter;
+import com.team142.tode.controller.ConnectionManager;
+import com.team142.tode.controller.RouterManager;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.WebSocketMessage;
@@ -24,18 +24,18 @@ public class GameWebSocket implements WebSocketHandler {
 
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
-        TDRouter.handle(session.getId(), (String) message.getPayload()); //TODO: does this work?
+        RouterManager.handle(session.getId(), (String) message.getPayload()); //TODO: does this work?
     }
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        TDConnectionManager.playerConnects(session);
+        ConnectionManager.playerConnects(session);
     }
 
     @Override
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         if (!session.isOpen()) {
-            TDConnectionManager.playerDisconnects(session);
+            ConnectionManager.playerDisconnects(session);
         }
         if (!(exception instanceof EOFException)) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Unknown Error at websocket:", exception);
@@ -44,7 +44,7 @@ public class GameWebSocket implements WebSocketHandler {
 
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus closeStatus) throws Exception {
-        TDConnectionManager.playerDisconnects(session);
+        ConnectionManager.playerDisconnects(session);
     }
 
     @Override
