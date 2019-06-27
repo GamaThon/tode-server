@@ -7,9 +7,6 @@ package com.team142.tode.model;
 
 import lombok.*;
 
-/**
- * @author just1689
- */
 @Data
 @Builder
 @AllArgsConstructor
