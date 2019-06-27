@@ -9,6 +9,7 @@ public class TowerTickerExample extends Ticker {
 
     public TowerTickerExample(long interval, BaseTower tower) {
         super(interval);
+        this.tower = tower;
     }
 
     @Override
