@@ -17,15 +17,15 @@ public class TDRouter {
 
     private static final Logger LOG = Logger.getLogger(TDRouter.class.getName());
 
-    private static final HashMap<String, Class> ROUTES = new HashMap<>();
+    private static final HashMap<String, Handler> ROUTES = new HashMap<>();
 
     static {
-        ROUTES.put(ConversationType.P_NAME.name(), HandlePName.class);
-        ROUTES.put(ConversationType.P_NEW.name(), HandlePNew.class);
-        ROUTES.put(ConversationType.P_JOIN.name(), HandlePJoin.class);
-        ROUTES.put(ConversationType.P_LIST.name(), HandlePList.class);
-        ROUTES.put(ConversationType.P_PLACE.name(), HandlePPlace.class);
-        ROUTES.put(ConversationType.P_SEND.name(), HandlePSend.class);
+        ROUTES.put(ConversationType.P_NAME.name(), new HandlePName());
+        ROUTES.put(ConversationType.P_NEW.name(), new HandlePNew());
+        ROUTES.put(ConversationType.P_JOIN.name(), new HandlePJoin());
+        ROUTES.put(ConversationType.P_LIST.name(), new HandlePList());
+        ROUTES.put(ConversationType.P_PLACE.name(), new HandlePPlace());
+        ROUTES.put(ConversationType.P_SEND.name(), new HandlePSend());
 
     }
 
@@ -40,19 +40,12 @@ public class TDRouter {
     }
 
     public static void handle(String conversation, String sessionID, String message) {
-        Class c = ROUTES.get(conversation);
-        if (c == null) {
+        Handler h = ROUTES.get(conversation);
+        if (h == null) {
             LOG.log(Level.SEVERE, "Could not handle conversation: " + conversation);
             return;
         }
-        try {
-            Handler o = (Handler) c.getDeclaredConstructor().newInstance();
-            o.handle(sessionID, message);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        h.handle(sessionID, message);
     }
 
 
