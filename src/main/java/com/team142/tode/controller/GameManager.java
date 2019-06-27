@@ -29,7 +29,7 @@ public class GameManager {
         //...
 
         //TODO: start timers
-        game.setMoneyTicker(new MoneyTicker(game, 1000));
+        game.setMoneyTicker(new MoneyTicker(1000, game));
         new Thread(game.getMoneyTicker()).start();
 
     }
