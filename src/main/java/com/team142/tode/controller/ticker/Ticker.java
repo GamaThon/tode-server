@@ -6,18 +6,14 @@ import lombok.Data;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Data
-public abstract class BaseTower implements Runnable, Stoppable {
+public abstract class Ticker implements Runnable, Stoppable {
 
-    private String gameID;
     private AtomicBoolean keepOnKeepingOn;
-    private long ticker;
-    private int level;
+    private long interval;
 
-    public BaseTower(String gid, long ticker) {
-        this.gameID = gid;
-        this.ticker = ticker;
+    public Ticker(long interval) {
+        this.interval = interval;
         this.keepOnKeepingOn = new AtomicBoolean(true);
-        this.level = 1;
     }
 
     public abstract void handle();
@@ -27,7 +23,7 @@ public abstract class BaseTower implements Runnable, Stoppable {
         while (keepOnKeepingOn.get()) {
             handle();
             try {
-                Thread.sleep(ticker);
+                Thread.sleep(interval);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

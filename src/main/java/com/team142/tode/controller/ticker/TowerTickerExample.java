@@ -1,23 +1,23 @@
 package com.team142.tode.controller.ticker;
 
-import com.team142.tode.model.TDGame;
 
-public class TowerTickerExample extends BaseTower implements Stoppable {
+import com.team142.tode.model.BaseTower;
 
-    private static long initialTicker = 1000;
+public class TowerTickerExample extends Ticker {
+
     private BaseTower tower;
 
-    public TowerTickerExample(TDGame game, BaseTower tower) {
-        super(game.getId(), initialTicker);
-        this.tower = tower;
+    public TowerTickerExample(long interval, BaseTower tower) {
+        super(interval);
     }
 
     @Override
     public void handle() {
-        //TODO: handle this particular type of tower shooting at things
-    }
 
-    public void stop() {
-        this.getKeepOnKeepingOn().set(false);
+        tower.getDamage();
+        tower.getLevel();
+        tower.getGameId();
+
+        //TODO: attack things?
     }
 }
