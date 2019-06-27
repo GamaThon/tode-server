@@ -8,9 +8,8 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Builder
 @AllArgsConstructor
-public class BaseTower extends PlaceableElement {
+public abstract class BaseTower extends PlaceableElement {
 
     private String type;
     private String owner;
