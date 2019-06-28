@@ -16,6 +16,7 @@ public class Server {
 
     public static Server instance = Server.builder()
             .games(new ConcurrentHashMap<>())
+            .players(new ConcurrentHashMap<>())
             .build();
 
     private ConcurrentHashMap<String, Game> games;
