@@ -2,6 +2,7 @@ package com.team142.tode.controller;
 
 import com.team142.tode.model.Player;
 import com.team142.tode.model.Server;
+import com.team142.tode.model.ViewType;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -21,6 +22,11 @@ public class ConnectionManager {
 
     private static void playerConnects(Player player) {
         Server.instance.getPlayers().put(player.getId(), player);
+
+        //Switch views
+        player.changePlayerView(ViewType.NAMING);
+
+
     }
 
     public static void playerDisconnects(WebSocketSession session) {
