@@ -4,6 +4,7 @@ import com.team142.tode.model.Player;
 import com.team142.tode.model.Server;
 import com.team142.tode.model.ViewType;
 import com.team142.tode.model.messages.MessagePName;
+import com.team142.tode.model.messages.MessageSGames;
 import com.team142.tode.utils.JsonUtils;
 import lombok.NoArgsConstructor;
 
@@ -20,7 +21,10 @@ public class HandlePName implements Handler {
         LOG.log(Level.INFO, "Name is " + o.getName());
         Player player = Server.instance.getPlayers().get(sessionID);
         player.setName(o.getName());
+
         player.changePlayerView(ViewType.MATCHING);
+        MessageSGames response = new MessageSGames(Server.instance.getGames().values());
+        player.sendMessage(response);
 
     }
 }
