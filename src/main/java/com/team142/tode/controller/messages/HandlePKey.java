@@ -3,6 +3,7 @@ package com.team142.tode.controller.messages;
 import com.team142.tode.controller.ticker.CreepMovementTicker;
 import com.team142.tode.model.*;
 import com.team142.tode.model.map.SpaceTimePoint;
+import com.team142.tode.model.messages.MessageSPlayerCreep;
 
 import java.util.UUID;
 import java.util.logging.Level;
@@ -49,6 +50,8 @@ public class HandlePKey implements Handler {
         dragon.setPoint(spaceTimePoint);
 
         new Thread(dragon.getTicker()).start();
+
+        player.sendMessage(MessageSPlayerCreep.builder().id(dragon.getId()).PlayerNumber(playerNumber).build());
 
     }
 

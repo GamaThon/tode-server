@@ -26,6 +26,7 @@ public enum ConversationType {
     S_MAP,
     S_SHARE_TAG,
     S_PLAYER_NUMBER,
+    S_PLAYER_CREEP,
 
 
 }
