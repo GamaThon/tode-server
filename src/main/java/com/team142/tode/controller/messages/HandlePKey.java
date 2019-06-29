@@ -51,7 +51,9 @@ public class HandlePKey implements Handler {
         messageSPlayerCreep.setId(dragon.getId());
         messageSPlayerCreep.setPlayerNumber(playerNumber);
 
-        player.sendMessage(messageSPlayerCreep);
+        game.getPlayers().forEach(
+                (p) -> player.sendMessage(messageSPlayerCreep)
+        );
 
     }
 
