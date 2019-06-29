@@ -14,7 +14,8 @@ public class HandlePKey implements Handler {
 
     @Override
     public void handle(String sessionID, String msg) {
-        LOG.log(Level.SEVERE, "handle Message P Key not implemented");
+        LOG.log(Level.SEVERE, "Sending creep");
+        keyDown(sessionID);
 
     }
 
