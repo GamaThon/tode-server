@@ -78,8 +78,8 @@ public class HandlePName implements Handler {
         }
 
         MessageSPlayerNumber messageSPlayerNumber = new MessageSPlayerNumber();
-        messageSPlayerNumber.setPlayerNumber(playerNumber);
         messageSPlayerNumber.setConversationType(ConversationType.S_PLAYER_NUMBER);
+        messageSPlayerNumber.setPlayerNumber(playerNumber);
 
         player.sendMessage(messageSPlayerNumber);
 
