@@ -7,10 +7,10 @@ import com.team142.tode.model.Server;
 import com.team142.tode.model.ViewType;
 import com.team142.tode.model.messages.MessagePName;
 import com.team142.tode.model.messages.MessageSGames;
+import com.team142.tode.model.messages.MessageSPlayerNumber;
 import com.team142.tode.utils.JsonUtils;
 import lombok.NoArgsConstructor;
 
-import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
@@ -28,6 +28,8 @@ public class HandlePName implements Handler {
         player.setName(o.getName());
 
         player.changePlayerView(ViewType.MATCHING);
+
+        int playerNumeber;
         //TODO get a player to join a game.
         if (Server.instance.getGames().size() == 0) {
             Game game = Game.builder()
@@ -41,14 +43,29 @@ public class HandlePName implements Handler {
                 LOG.log(Level.SEVERE, "Unexpectedly can't join own game!");
                 return;
             }
+
+            playerNumeber = 0;
+
             Server.instance.getGames().put(game.getId(), game);
+
         } else {
+
+//            Iterator ite = Server.instance.getGames().entrySet().iterator();
+//            while (ite.hasNext()) {
+//                Map.Entry<String, Game> gameItem = (Map.Entry<String, Game>)ite.next();
+//                if (gameItem.getValue().getPlayers().size() > 1) {
+//                    continue;
+//                }
+//            }
+
             Game game = Server.instance.getGames().entrySet().iterator().next().getValue();
             boolean ok = game.playerJoins(player);
             if (!ok) {
                 LOG.log(Level.INFO, "Could not join the game: ", game.getId());
                 return;
             }
+
+            playerNumeber = 1;
 
             if (game.isReady()) {
                 GameManager.startGame(game);
@@ -58,6 +75,8 @@ public class HandlePName implements Handler {
 
             }
         }
+
+        player.sendMessage(MessageSPlayerNumber.builder().PlayerNumber(playerNumeber).build());
         MessageSGames response = new MessageSGames(Server.instance.getGames().values());
         player.sendMessage(response);
 
