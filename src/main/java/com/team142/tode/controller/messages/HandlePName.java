@@ -5,6 +5,7 @@ import com.team142.tode.model.Game;
 import com.team142.tode.model.Player;
 import com.team142.tode.model.Server;
 import com.team142.tode.model.ViewType;
+import com.team142.tode.model.messages.ConversationType;
 import com.team142.tode.model.messages.MessagePName;
 import com.team142.tode.model.messages.MessageSGames;
 import com.team142.tode.model.messages.MessageSPlayerNumber;
@@ -29,7 +30,7 @@ public class HandlePName implements Handler {
 
         player.changePlayerView(ViewType.MATCHING);
 
-        int playerNumeber;
+        int playerNumber;
         //TODO get a player to join a game.
         if (Server.instance.getGames().size() == 0) {
             Game game = Game.builder()
@@ -44,7 +45,7 @@ public class HandlePName implements Handler {
                 return;
             }
 
-            playerNumeber = 0;
+            playerNumber = 0;
 
             Server.instance.getGames().put(game.getId(), game);
 
@@ -65,7 +66,7 @@ public class HandlePName implements Handler {
                 return;
             }
 
-            playerNumeber = 1;
+            playerNumber = 1;
 
             if (game.isReady()) {
                 GameManager.startGame(game);
@@ -76,7 +77,12 @@ public class HandlePName implements Handler {
             }
         }
 
-        player.sendMessage(MessageSPlayerNumber.builder().PlayerNumber(playerNumeber).build());
+        MessageSPlayerNumber messageSPlayerNumber = new MessageSPlayerNumber();
+        messageSPlayerNumber.setPlayerNumber(playerNumber);
+        messageSPlayerNumber.setConversationType(ConversationType.S_PLAYER_NUMBER);
+
+        player.sendMessage(messageSPlayerNumber);
+
         MessageSGames response = new MessageSGames(Server.instance.getGames().values());
         player.sendMessage(response);
 
