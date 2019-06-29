@@ -8,8 +8,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public abstract class BaseCreep extends MoveableElement {
+public class BaseCreep extends MoveableElement {
 
     private String id;
     private String gameId;

@@ -38,11 +38,6 @@ public class HandlePKey implements Handler {
 
         dragon.setOwner(sessionID);
 
-        //TODO move to dragon impl
-        dragon.setHealth(1);
-        dragon.setTicker(new CreepMovementTicker(30, dragon));
-        dragon.setSpeed(0.5);
-
         dragon.setTag(0);
         dragon.setModel("");
         dragon.setSkin("");

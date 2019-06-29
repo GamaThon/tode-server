@@ -8,7 +8,6 @@ package com.team142.tode.model.map;
 import lombok.*;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class PlaceableElement {

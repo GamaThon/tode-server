@@ -1,15 +1,18 @@
 package com.team142.tode.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
+import com.team142.tode.controller.ticker.CreepMovementTicker;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Data
 public class Dragon extends BaseCreep {
 
+    public String roar;
+
+    public Dragon() {
+        super();
+        this.setHealth(1);
+        this.setTicker(new CreepMovementTicker(30, this));
+        this.setSpeed(0.5);
+    }
 
 }
