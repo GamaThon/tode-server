@@ -9,7 +9,6 @@ buildscript {
 }
 
 plugins {
-    id 'io.franzbecker.gradle-lombok' version '1.14'
     id 'java'
 }
 
@@ -19,7 +18,6 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.junit.platform.gradle.plugin'
-apply plugin: 'io.franzbecker.gradle-lombok'
 
 jar {
     baseName = 'td-server'
@@ -54,6 +52,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.9.1'
     compile("org.webjars:webjars-locator")
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
 
     testCompile("org.junit.jupiter:junit-jupiter-api:5.1.0")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.1.0")
