@@ -47,7 +47,11 @@ public class HandlePKey implements Handler {
 
         new Thread(dragon.getTicker()).start();
 
-        player.sendMessage(MessageSPlayerCreep.builder().id(dragon.getId()).PlayerNumber(playerNumber).build());
+        MessageSPlayerCreep messageSPlayerCreep = new MessageSPlayerCreep();
+        messageSPlayerCreep.setId(dragon.getId());
+        messageSPlayerCreep.setPlayerNumber(playerNumber);
+
+        player.sendMessage(messageSPlayerCreep);
 
     }
 
