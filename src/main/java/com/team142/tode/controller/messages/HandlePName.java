@@ -1,5 +1,7 @@
 package com.team142.tode.controller.messages;
 
+import com.team142.tode.controller.GameManager;
+import com.team142.tode.model.Game;
 import com.team142.tode.model.Player;
 import com.team142.tode.model.Server;
 import com.team142.tode.model.ViewType;
@@ -8,6 +10,9 @@ import com.team142.tode.model.messages.MessageSGames;
 import com.team142.tode.utils.JsonUtils;
 import lombok.NoArgsConstructor;
 
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +28,36 @@ public class HandlePName implements Handler {
         player.setName(o.getName());
 
         player.changePlayerView(ViewType.MATCHING);
+        //TODO get a player to join a game.
+        if (Server.instance.getGames().size() == 0) {
+            Game game = Game.builder()
+                    .id(UUID.randomUUID().toString())
+                    .name(o.getName())
+                    .players(new CopyOnWriteArrayList<>())
+                    .map("default")
+                    .build();
+            boolean ok = game.playerJoins(player);
+            if (!ok) {
+                LOG.log(Level.SEVERE, "Unexpectedly can't join own game!");
+                return;
+            }
+            Server.instance.getGames().put(game.getId(), game);
+        } else {
+            Game game = Server.instance.getGames().entrySet().iterator().next().getValue();
+            boolean ok = game.playerJoins(player);
+            if (!ok) {
+                LOG.log(Level.INFO, "Could not join the game: ", game.getId());
+                return;
+            }
+
+            if (game.isReady()) {
+                GameManager.startGame(game);
+
+            } else {
+                player.changePlayerView(ViewType.LOBBY);
+
+            }
+        }
         MessageSGames response = new MessageSGames(Server.instance.getGames().values());
         player.sendMessage(response);
 

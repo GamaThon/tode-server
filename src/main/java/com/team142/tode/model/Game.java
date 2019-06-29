@@ -20,6 +20,8 @@ public class Game {
     private String id;
     private String name;
 
+    private boolean started;
+
     @JsonIgnore
     private String map;
     @JsonIgnore
@@ -29,7 +31,7 @@ public class Game {
     private MoneyTicker moneyTicker;
 
     public void playerLeaves(Player player) {
-        players.remove(player.getId());
+        players.remove(player);
         GameManager.checkGame(this);
     }
 

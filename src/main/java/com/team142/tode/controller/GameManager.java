@@ -22,15 +22,18 @@ public class GameManager {
     }
 
     public static void startGame(Game game) {
-        //TODO: change the players views
-        game.getPlayers().forEach((p) -> p.changePlayerView(ViewType.GAMING));
 
-        //TODO: send the map
-        //...
+            //TODO: change the players views
+            game.getPlayers().forEach((p) -> p.changePlayerView(ViewType.GAMING));
 
-        //TODO: start timers
-        game.setMoneyTicker(new MoneyTicker(1000, game));
-        new Thread(game.getMoneyTicker()).start();
+            //TODO: send the map
+            //...
 
+        if (!game.isStarted()) {
+            //TODO: start timers
+            game.setMoneyTicker(new MoneyTicker(1000, game));
+            new Thread(game.getMoneyTicker()).start();
+            game.setStarted(true);
+        }
     }
 }

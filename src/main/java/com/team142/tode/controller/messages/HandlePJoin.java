@@ -30,7 +30,6 @@ public class HandlePJoin implements Handler {
 
         if (game.isReady()) {
             GameManager.startGame(game);
-
         } else {
             me.changePlayerView(ViewType.LOBBY);
 
