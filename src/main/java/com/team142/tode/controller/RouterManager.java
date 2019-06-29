@@ -25,6 +25,7 @@ public class RouterManager {
         ROUTES.put(ConversationType.P_LIST.name(), new HandlePList());
         ROUTES.put(ConversationType.P_PLACE.name(), new HandlePPlace());
         ROUTES.put(ConversationType.P_SEND.name(), new HandlePSend());
+        ROUTES.put(ConversationType.P_KEY.name(), new HandlePKey());
 
     }
 

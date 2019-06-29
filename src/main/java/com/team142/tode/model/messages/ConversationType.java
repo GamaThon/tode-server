@@ -17,6 +17,7 @@ public enum ConversationType {
     P_NEW,
     P_PLACE,
     P_SEND,
+    P_KEY,
 
     //From the server to the client
     S_GAME,
