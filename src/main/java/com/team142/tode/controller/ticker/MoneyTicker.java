@@ -16,7 +16,6 @@ public class MoneyTicker extends Ticker {
     public void handle() {
         int m = game.getMoneyRate();
         game.getPlayers().
-                values().
                 forEach(
                         (p) -> p.getMoney().addAndGet(m)
                 );

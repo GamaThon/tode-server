@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,7 +23,7 @@ public class Game {
     @JsonIgnore
     private String map;
     @JsonIgnore
-    private ConcurrentHashMap<String, Player> players;
+    private CopyOnWriteArrayList<Player> players;
 
     @JsonIgnore
     private MoneyTicker moneyTicker;
@@ -37,7 +38,7 @@ public class Game {
         if (players.size() > 2) {
             return false;
         }
-        players.put(player.getId(), player);
+        players.add(player);
         return true;
     }
 

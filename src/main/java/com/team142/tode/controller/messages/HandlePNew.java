@@ -9,7 +9,7 @@ import com.team142.tode.utils.JsonUtils;
 import lombok.NoArgsConstructor;
 
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,7 +24,7 @@ public class HandlePNew implements Handler {
         Game game = Game.builder()
                 .id(UUID.randomUUID().toString())
                 .name(o.getName())
-                .players(new ConcurrentHashMap<>())
+                .players(new CopyOnWriteArrayList<>())
                 .map("default")
                 .build();
         boolean ok = game.playerJoins(me);

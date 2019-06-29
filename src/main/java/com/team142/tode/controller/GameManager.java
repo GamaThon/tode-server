@@ -23,7 +23,7 @@ public class GameManager {
 
     public static void startGame(Game game) {
         //TODO: change the players views
-        game.getPlayers().values().forEach((p) -> p.changePlayerView(ViewType.GAMING));
+        game.getPlayers().forEach((p) -> p.changePlayerView(ViewType.GAMING));
 
         //TODO: send the map
         //...
