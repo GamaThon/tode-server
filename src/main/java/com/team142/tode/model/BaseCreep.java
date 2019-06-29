@@ -2,14 +2,12 @@ package com.team142.tode.model;
 
 import com.team142.tode.controller.ticker.Ticker;
 import com.team142.tode.model.map.MoveableElement;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public abstract class BaseCreep extends MoveableElement {
 
