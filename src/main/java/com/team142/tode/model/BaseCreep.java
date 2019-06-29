@@ -16,6 +16,8 @@ public abstract class BaseCreep extends MoveableElement {
 
     private String owner;
 
+    private double cost;
+
     private int health;
     private int armour;
 
